@@ -1,0 +1,5 @@
+Credentials cache: API:1013450
+        Principal: gernesto@KZN.21-SCHOOL.RU
+
+  Issued                Expires               Principal
+Jul 20 16:20:11 2021  Jul 21 02:20:02 2021  krbtgt/KZN.21-SCHOOL.RU@KZN.21-SCHOOL.RU
