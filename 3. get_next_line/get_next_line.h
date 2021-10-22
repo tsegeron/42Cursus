@@ -6,14 +6,13 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/15 23:43:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/22 22:27:56 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/10/22 22:28:07 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-# define BUFFER_SIZE 42
 /* ::::::::::::::::::::::::::::::::> headers <::::::::::::::::::::::::::::::: */
 # include <stdlib.h>	/* :::::malloc::::: */
 # include <unistd.h>	/* ::::::read:::::: */

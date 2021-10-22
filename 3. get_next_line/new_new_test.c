@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 22:27:06 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/22 22:58:06 by gernesto         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "get_next_line.h"
 
 char	*get_left_str(char *full)
@@ -105,12 +93,12 @@ char	*get_next_line(int fd)
 	left = get_left_str(left);
 	return (ret);
 }
-/*
+
 int main(void)
 {
 	int		fd;
 	int		rep = 2;
-	//	char	*res;
+//	char	*res;
 
 	fd = open("test_text", O_RDONLY);
 	while (rep--)
@@ -132,19 +120,18 @@ int main(void)
 
 
 
-	//	while (rep--)
-	//	{
-	//get_next_line(fd);
-	//get_next_line(fd);
-	//get_next_line(fd);
-	//get_next_line(fd);
-	//		printf("%s", get_next_line(fd));
-	//		printf("%s", get_next_line(fd));
-	//		printf("%s", get_next_line(fd));
-	//		printf("%s", get_next_line(fd));
-	//	}
+//	while (rep--)
+//	{
+//get_next_line(fd);
+//get_next_line(fd);
+//get_next_line(fd);
+//get_next_line(fd);
+//		printf("%s", get_next_line(fd));
+//		printf("%s", get_next_line(fd));
+//		printf("%s", get_next_line(fd));
+//		printf("%s", get_next_line(fd));
+//	}
 	close(fd);
-	//	while (1);
+//	while (1);
 
 }
-*/
