@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/22 22:27:06 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/22 22:58:06 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/10/22 22:59:14 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,7 +79,7 @@ char	*get_full_str(char *left, int fd)
 	while (bytes_check && !ft_strchr(left))
 	{
 		bytes_check = read(fd, tmp, BUFFER_SIZE);
-		if (bytes_check < 0)
+		if (bytes_check <= 0)
 		{
 			free (tmp);
 			return (NULL);
