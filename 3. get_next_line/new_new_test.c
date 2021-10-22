@@ -3,110 +3,135 @@
 char	*get_left_str(char *full)
 {
 	char	*left;
-	int		n;
-//	int		i;
-//	int		j;
-//	int		end;
-//
-//	i = 0;
-	n = ft_strchr(full);
-//	j = ft_strlen(full) - n - 1;
-	left = ft_substr(full, n + 1, ft_strlen(full) - n);
+	int		i;
+	int		j;
 
-//	while (j != ft_strlen(full) - 1)
-//		left[i++] = full[j++];
-
+	i = 0;
+	while (full[i] != '\n' && full[i])
+		i++;
+	i++;
+	if (full[i] == '\0')
+	{
+		free (full);
+		return (NULL);
+	}
+	left = (char *) malloc (sizeof(char) * ft_strlen(&full[i]));
+	if (!left)
+		return (NULL);
+	j = 0;
+	while (full[i])
+		left[j++] = full[i++];
+	left[j] = '\0';
+	free (full);
 	return (left);
 }
 
 char	*get_ret_str(char *full)
 {
 	char	*ret;
+	int		i;
 
-	ret = ft_substr(full, 0, ft_strchr(full) + 1);
+	i = 0;
+	while (full[i] != '\n' && full[i])
+		i++;
+	ret = (char *) malloc (sizeof(char) * i + 2);
+	if (!ret)
+		return (NULL);
+	if (full[0] == '\n')
+	{
+		ret[0] = '\n';
+		ret[1] = '\0';
+		return (ret);
+	}
+	i = 0;
+	while (full[i] != '\n' && full[i])
+	{
+		ret[i] = full[i];
+		i++;
+	}
+	if (full[i] == '\n')
+		ret[i++] = '\n';
+	ret[i] = '\0';
 	return (ret);
 }
 
-char	*get_full_str(char *left ,int fd)
+char	*get_full_str(char *left, int fd)
 {
-	char	*full;
 	char	*tmp;
-	int 	check;
-	int 	bytes_check;
+	int		bytes_check;
 
-	if (left && ft_strchr(left) != -1)
-		return (left);
-	bytes_check = 0;
-	tmp = (char *)malloc (BUFFER_SIZE);
+	tmp = (char *)malloc(BUFFER_SIZE + 1);
 	if (!tmp)
 		return (NULL);
-	check = 0;
-	while (read(fd, tmp, BUFFER_SIZE) > 0)
+	bytes_check = 1;
+	while (bytes_check && !ft_strchr(left))
 	{
-		bytes_check = 1;
-		if (!check++)
-			full = ft_strdup(tmp);
-		else
+		bytes_check = read(fd, tmp, BUFFER_SIZE);
+		if (bytes_check < 0)
 		{
-//			free (full);
-			full = ft_strjoin(full, tmp);
+			free (tmp);
+			return (NULL);
 		}
-//			free (tmp);
-		if (ft_strchr(full) != -1)
-			break ;
+		tmp[bytes_check] = '\0';
+		left = ft_strjoin(left, tmp);
 	}
-	if (!bytes_check)
-	{
-//		free(tmp);
-		return (NULL);
-	}
-	if (left && ft_strchr(left) == -1)
-		full = ft_strjoin(left, full);
-	return (full);
+	free (tmp);
+	return (left);
 }
 
 char	*get_next_line(int fd)
 {
 	char		*ret;
-	char		*full;
 	static char	*left;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	full = get_full_str(left, fd);
-	if (!full)
-		return (NULL);
-	ret = get_ret_str(full);
-	left = get_left_str(full);
-	free (full);
-	//	printf("RET  :>%s", ret);
-	//	printf("LEFT :>%s", left);
-
+	left = get_full_str(left, fd);
+	if (!left)
+		return (left);
+	ret = get_ret_str(left);
+	left = get_left_str(left);
 	return (ret);
 }
 
 int main(void)
 {
-	int fd;
+	int		fd;
+	int		rep = 2;
+//	char	*res;
 
-	fd = open("test1", O_RDONLY);
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	//	printf("%s", get_next_line(fd));
-	//	printf("%s", get_next_line(fd));
+	fd = open("test_text", O_RDONLY);
+	while (rep--)
+		printf("%s", get_next_line(fd));
+
+	printf("\n");
+
+	rep = 2;
+	fd = open("test_empty", O_RDONLY);
+	while (rep--)
+		printf("%s", get_next_line(fd));
+
+	printf("\n");
+
+	rep = 2;
+	fd = open("test_rights", O_RDONLY);
+	while (rep--)
+		printf("%s", get_next_line(fd));
+
+
+
+//	while (rep--)
+//	{
+//get_next_line(fd);
+//get_next_line(fd);
+//get_next_line(fd);
+//get_next_line(fd);
+//		printf("%s", get_next_line(fd));
+//		printf("%s", get_next_line(fd));
+//		printf("%s", get_next_line(fd));
+//		printf("%s", get_next_line(fd));
+//	}
 	close(fd);
-	while (1);
+//	while (1);
 
 }

@@ -28,7 +28,7 @@ char	*get_full_str(char *left ,int fd)
 	if (left && ft_strchr(left) != -1)
 		return (left);
 	bytes_check = 0;
-	tmp = (char *)malloc (BUFFER_SIZE + 1);
+	tmp = (char *)malloc (BUFFER_SIZE  + 1); /* ::::::::MALLOC:::::::: */
 	if (!tmp)
 		return (NULL);
 	check = 0;
@@ -42,6 +42,7 @@ char	*get_full_str(char *left ,int fd)
 		if (ft_strchr(full) != -1)
 			break ;
 	}
+		free (tmp);
 	if (!bytes_check)
 		return (NULL);
 	if (left && ft_strchr(left) == -1)
@@ -51,22 +52,22 @@ char	*get_full_str(char *left ,int fd)
 
 char	*get_next_line(int fd)
 {
-	char		*ret;
-	char		*full;
+//	char		*ret;
+//	char		*full;
 	static char	*left;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	full = get_full_str(left, fd);
-	if (!full)
-		return (NULL);
-	ret = get_ret_str(full);
-	left = get_left_str(full);
+	left = get_full_str(left, fd);
+	if (!left)
+		return (left);
+//	ret = get_ret_str(full);
+//	left = get_left_str(full);
 //	free (full);
 //	printf("RET  :>%s", ret);
 //	printf("LEFT :>%s", left);
 
-	return (ret);
+	return (left);
 }
 
 int main(void)
@@ -75,11 +76,11 @@ int main(void)
 
 	fd = open("test1", O_RDONLY);
 	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
-	printf("%s", get_next_line(fd));
+//	printf("%s", get_next_line(fd));
+//	printf("%s", get_next_line(fd));
+//	printf("%s", get_next_line(fd));
+//	printf("%s", get_next_line(fd));
+//	printf("%s", get_next_line(fd));
 //	printf("%s", get_next_line(fd));
 //	printf("%s", get_next_line(fd));
 //	printf("%s", get_next_line(fd));
@@ -91,6 +92,6 @@ int main(void)
 	//	printf("%s", get_next_line(fd));
 	//	printf("%s", get_next_line(fd));
 	close(fd);
-//	while (1);
+	while (1);
 
 }
