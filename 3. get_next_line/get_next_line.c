@@ -21,13 +21,13 @@ char	*get_left_str(char *full)
 	i = 0;
 	while (full[i] != '\n' && full[i])
 		i++;
-	i++;
 	if (full[i] == '\0')
 	{
 		free (full);
 		return (NULL);
 	}
-	left = (char *) malloc (sizeof(char) * ft_strlen(&full[i]));
+	i++;
+	left = (char *) malloc (sizeof(char) * ft_strlen(&full[i]) + 1);
 	if (!left)
 		return (NULL);
 	j = 0;
@@ -43,18 +43,14 @@ char	*get_ret_str(char *full)
 	char	*ret;
 	int		i;
 
+	if (full[0] == '\0')
+		return (NULL);
 	i = 0;
 	while (full[i] != '\n' && full[i])
 		i++;
 	ret = (char *) malloc (sizeof(char) * i + 2);
 	if (!ret)
 		return (NULL);
-	if (full[0] == '\n')
-	{
-		ret[0] = '\n';
-		ret[1] = '\0';
-		return (ret);
-	}
 	i = 0;
 	while (full[i] != '\n' && full[i])
 	{
@@ -76,10 +72,10 @@ char	*get_full_str(char *left, int fd)
 	if (!tmp)
 		return (NULL);
 	bytes_check = 1;
-	while (bytes_check && !ft_strchr(left))
+	while (bytes_check != 0 && !ft_strchr(left, '\n'))
 	{
 		bytes_check = read(fd, tmp, BUFFER_SIZE);
-		if (bytes_check <= 0)
+		if (bytes_check < 0)
 		{
 			free (tmp);
 			return (NULL);
@@ -93,8 +89,8 @@ char	*get_full_str(char *left, int fd)
 
 char	*get_next_line(int fd)
 {
-	char		*ret;
 	static char	*left;
+	char		*ret;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
