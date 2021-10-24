@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: gernesto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/22 22:27:06 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/22 22:59:14 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/24 04:53:52 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/24 04:53:57 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 char	*get_left_str(char *full)
 {
@@ -89,16 +89,16 @@ char	*get_full_str(char *left, int fd)
 
 char	*get_next_line(int fd)
 {
-	static char	*left;
+	static char	*left[1000];
 	char		*ret;
 
 	if (fd < 0 || BUFFER_SIZE < 1)
 		return (NULL);
-	left = get_full_str(left, fd);
-	if (!left)
-		return (left);
-	ret = get_ret_str(left);
-	left = get_left_str(left);
+	left[fd] = get_full_str(left[fd], fd);
+	if (!left[fd])
+		return (NULL);
+	ret = get_ret_str(left[fd]);
+	left[fd] = get_left_str(left[fd]);
 	return (ret);
 }
 /*

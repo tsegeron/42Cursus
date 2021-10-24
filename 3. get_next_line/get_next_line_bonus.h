@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.h                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.h                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*   By: gernesto <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/15 23:43:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/23 20:50:55 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/24 04:54:28 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/24 04:54:32 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef GET_NEXT_LINE_H
-# define GET_NEXT_LINE_H
+#ifndef GET_NEXT_LINE_BONUS_H
+# define GET_NEXT_LINE_BONUS_H
 
 //# define BUFFER_SIZE 1
 //# define BUFFER_SIZE 41
@@ -25,36 +25,6 @@
 # include <stdio.h>		/* ::::::test:::::: */
 /* ::::::::::::::::::::::::::::::::> headers <::::::::::::::::::::::::::::::: */
 
-/* :::::::::::::::::::::::::::::::> Structure <:::::::::::::::::::::::::::::: */
-typedef struct s_l
-{
-	va_list	ap;
-	char	*tmp;
-	int		count;
-	int		ct;
-	int		i;
-	int		minus;
-	int		plus;
-	int		space;
-	int		mark;
-	int		zero;
-	int		width;
-	int		accur;
-	int		accur_x;
-}	t_l;
-
-typedef struct s_list
-{
-	int				fd;
-	int				line;
-	char			*full;
-	char			*ret;
-	char			*left;
-	struct s_list	*prev;
-	struct s_list	*next;
-}	t_st;
-/* :::::::::::::::::::::::::::::::> Structure <:::::::::::::::::::::::::::::: */
-
 /* ::::::::::::::::::::::::::::::> Prototypes <:::::::::::::::::::::::::::::: */
 char	*get_next_line(int fd);
 
@@ -65,4 +35,4 @@ char	*ft_strdup(char *src);
 char	*ft_strchr(char *s, char c);
 /* ::::::::::::::::::::::::::::::> Prototypes <:::::::::::::::::::::::::::::: */
 
-#endif /* :::GET_NEXT_LINE_H::: */
+#endif /* :::GET_NEXT_LINE_BONUS_H::: */
