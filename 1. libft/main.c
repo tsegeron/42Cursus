@@ -10,12 +10,12 @@
 
 int main(void)
 {
-/* atoi
-	char num[] = "   -2147483648";
-	char num1[] = "   -9223372036854775809";
-	printf("%d\n", ft_atoi(num1));
-	printf("%d\n", atoi(num1));
-* strdup
+// atoi
+	char num[] = "   -123";
+//	char num1[] = "   -9223372036854775809";
+	printf("ft_atoi  :  %d\n", ft_atoi(num));
+	printf("atoi     :  %d\n", atoi(num));
+/* strdup
 	char num[] = "";
 	printf(">%s<\n", ft_strdup(num));
 	printf(">%s<\n", strdup(num));
@@ -146,7 +146,7 @@ int main(void)
 */
 
 /* :::::::::::::::::::::::::::::::::> split <:::::::::::::::::::::::::::::::: */
-	char s1[] = " Omfg, I did it perfectly, no tears, no tears ! ";
+/*	char s1[] = " Omfg, I did it perfectly, no tears, no tears ! ";
 	char c = ' ';
 	char **array;
 	size_t i = 0;
@@ -161,7 +161,7 @@ int main(void)
 	//  i++;
 	}
 while (1);
-
+*/
 /* ::::::::::::::::::::::::::::::> putnbr_fd <::::::::::::::::::::::::::::::: */
 /*	int fd;
 
