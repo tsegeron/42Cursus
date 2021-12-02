@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 11:10:20 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 10:19:16 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
+	size_t	i;
 
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	i = 0;
+	if (n == 0)
+		return (0);
+	while (i != n - 1 && ((unsigned char *)s1)[i] == ((unsigned char *)s2)[i]
+			&& ((unsigned char *)s1)[i] != '\0')
+		i++;
+	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }

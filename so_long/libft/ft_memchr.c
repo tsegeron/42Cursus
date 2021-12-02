@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 10:36:12 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/13 18:39:56 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
+	size_t			i;
+	unsigned char	*tmp;
 
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	i = 0;
+	tmp = (unsigned char *) s;
+	while (i != n)
+	{
+		if (tmp[i] == (unsigned char) c)
+			return (&tmp[i]);
+		i++;
+	}
+	return (NULL);
 }

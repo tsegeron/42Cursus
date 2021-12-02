@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/10 22:30:26 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 16:36:47 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+int	ft_lstsize(t_list *lst)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
-
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	if (lst == NULL)
+		return (0);
+	if ((lst->next) == NULL)
+		return (1);
+	else
+		return (ft_lstsize(lst->next) + 1);
 }

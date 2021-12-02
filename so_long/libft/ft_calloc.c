@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 11:41:13 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/12 19:53:34 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+void	*ft_calloc(size_t count, size_t size)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
+	char	*ptr;
+	size_t	i;
 
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	i = 0;
+	ptr = (char *)malloc(count * size);
+	if (ptr)
+		while (i != count * size)
+			ptr[i++] = 0;
+	return ((void *)ptr);
 }

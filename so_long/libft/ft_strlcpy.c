@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 10:56:52 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 10:19:16 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
+	size_t	j;
+	int		i;
 
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	i = 0;
+	j = ft_strlen(src);
+	if (dstsize)
+	{
+		while (src[i] != '\0' && --dstsize != 0)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (ft_strlen(src));
 }

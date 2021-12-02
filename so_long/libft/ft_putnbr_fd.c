@@ -1,29 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/09 22:12:44 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 10:19:16 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+void	ft_putnbr_fd(int n, int fd)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
+	char	a;
 
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	if (n == -2147483648)
+		write (fd, "-2147483648", 11);
+	else
+	{
+		if (n < 0)
+		{
+			n = -n;
+			ft_putchar_fd('-', fd);
+		}
+		a = (n % 10 + '0');
+		n /= 10;
+		if (n != 0)
+			ft_putnbr_fd(n, fd);
+		ft_putchar_fd(a, fd);
+	}
 }

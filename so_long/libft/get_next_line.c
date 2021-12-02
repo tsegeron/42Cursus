@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../so_long.h"
+#include "../hdrs/so_long.h"
 
 char	*get_left_str(char *full)
 {

@@ -1,15 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: gernesto <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/19 23:35:58 by gernesto          #+#    #+#              #
-#   Updated: 2021/10/20 06:26:10 by gernesto         ###   ########.fr       # #
-#                                                                              #
-# **************************************************************************** #
-
 CC = gcc
 
 FLAGS = -Wall -Wextra -Werror
@@ -20,29 +8,28 @@ AR = ar rcs
 
 # ------------------------------------------------------------------------------
 
-NAME 	=	libftprintf.a
+NAME 	=	lib.a
 #ENAME	=	exec
 
-HDRS	=	printft.h
+HDRS	=	so_long.h
 
-SRCS	=	ft_printf.c			ft_strlen.c			ft_putchar_fd_c.c	\
-			ft_itoa.c			ft_itoa_uns.c		ft_itoa_hex.c		\
-			ft_toupper.c		check_conv.c		ft_putstr_fd_c.c	\
-			zero_struct.c		do_flags.c			do_cases.c			\
-			do_case_c.c			do_case_s.c			do_case_p.c			\
-			do_case_di.c		do_case_u.c			do_case_x.c			\
-			do_case_x_up.c		do_case_perc.c		ft_itoa_lhex.c
+FLDR_S	=	srcs/
+FLDR_H	=	hdrs/
+FLDR_B	=	srcs_b/
+
+SRCS	=	read_map.c		check_symbols.c		map_dimensions.c
 
 
-#SRCS_B	=
+SRCS_B	=
 
-OBJS	=	${SRCS:%.c=%.o}
+SRC		=	$(addprefix ${FLDR_S},${SRCS})
+HDR		=	$(addprefix ${FLDR_H},${HDRS})
+SRC_B	=	$(addprefix ${FLDR_B},${SRCS_B})
 
-#OBJS_B	=	${SRCS_B:%.c=%.o}
+OBJS	=	${SRC:%.c=%.o}
+OBJS_B	=	${SRC_B:%.c=%.o}
 
-#DIR		=	sources/
-#SUBDIR	=	libft
-#D_INC	=	includes
+# ------------------------------------------------------------------------------
 
 READY	=	Library is assembled
 SWEPT	=	Directory was cleaned
@@ -55,15 +42,16 @@ _END	=	\e[0m
 
 #%.o:		${SRCS} ${HDRS}
 #			@${CC} ${FLAGS} -c $< -o $@
-%.o:		%.c	${HDRS}
+%.o:		%.c	${HDR}
 			@${CC} ${FLAGS} ${OPTFLAGS} -c -o $@ $<
 
 
 
-${NAME}: 	${OBJS}	${HDRS}
-#			@${MAKE} -C libft
-#			@mv libft/libft.a ${NAME}
+${NAME}: 	${OBJS}	${HDR}
+			@${MAKE} -C libft
+			@mv libft/libft.a ${NAME}
 			@${AR} ${NAME} $?
+			@${RM} ${OBJS}
 			@printf "${_GREEN}${READY}${_END}\n"
 
 
@@ -71,7 +59,6 @@ all:		${NAME}
 
 clean:
 			@${RM} ${OBJS}
-#			@${MAKE} -C libft
 			@printf "${_YELLOW}${SWEPT}${_END}\n"
 
 fclean:		clean
@@ -79,7 +66,7 @@ fclean:		clean
 
 re:			fclean all
 
-bonus:		${NAME}
+#bonus:		${NAME}
 
 
 

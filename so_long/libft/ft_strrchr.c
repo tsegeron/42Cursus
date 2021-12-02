@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 06:40:19 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 11:03:43 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 10:19:16 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "hdrs/so_long.h"
+#include "libft.h"
 
-static int	print_map_error(void)
+char	*ft_strrchr(const char *s, int c)
 {
-	write (2, "Map error\n", 10);
-	return (0);
-}
+	int	i;
 
-int	main(int ac, char *av[])
-{
-	t_map	map;
-
-	if (ac != 2 || !read_map(av[1], &map))
-		return (print_map_error());
-	
-	return (0);
+	i = (int)ft_strlen(s);
+	while (i != -1)
+	{
+		if (s[i] == (char) c)
+			return ((char *)&s[i]);
+		i--;
+	}
+	if (i < 0)
+		return (NULL);
+	return ((char *)&s[i]);
 }
