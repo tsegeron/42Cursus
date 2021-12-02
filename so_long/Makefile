@@ -8,7 +8,7 @@ AR = ar rcs
 
 # ------------------------------------------------------------------------------
 
-NAME 	=	lib.a
+NAME 	=	libmlx.a
 #ENAME	=	exec
 
 HDRS	=	so_long.h
@@ -17,7 +17,8 @@ FLDR_S	=	srcs/
 FLDR_H	=	hdrs/
 FLDR_B	=	srcs_b/
 
-SRCS	=	read_map.c		check_symbols.c		map_dimensions.c
+SRCS	=	read_map.c		check_symbols.c		map_dimensions.c	\
+			mlx_stuff.c
 
 
 SRCS_B	=
@@ -52,6 +53,9 @@ ${NAME}: 	${OBJS}	${HDR}
 			@mv libft/libft.a ${NAME}
 			@${AR} ${NAME} $?
 			@${RM} ${OBJS}
+			@${MAKE} -C mlx
+#			@mv mlx/libmlx.a .
+			@${MAKE} clean -C mlx
 			@printf "${_GREEN}${READY}${_END}\n"
 
 

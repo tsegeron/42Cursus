@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gernesto/Desktop/so_long/hdrs/mlx.h
+
+/Users/gernesto/Desktop/so_long/hdrs/so_long.h
+mlx.h
+/Users/gernesto/Desktop/so_long/hdrs/mlx.h
+../libft/libft.h
+/Users/gernesto/Desktop/so_long/libft/libft.h
+
+/Users/gernesto/Desktop/so_long/libft/libft.h
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+stddef.h
+-
+fcntl.h
+-
+
+/Users/gernesto/Desktop/so_long/main.c
+hdrs/so_long.h
+/Users/gernesto/Desktop/so_long/hdrs/so_long.h
+

@@ -1,7 +1,7 @@
 #ifndef SO_LONG_H
 #define SO_LONG_H
 
-# include <mlx.h>
+# include "mlx.h"
 # include "../libft/libft.h"
 
 //# define WALL
@@ -20,9 +20,29 @@ typedef struct s_map
 	int 	count_exits;
 	int 	count_coins;
 	int 	count_enemies;
-
-
 }	t_map;
+
+
+
+typedef struct s_img
+{
+	void	*img;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+}	t_img;
+
+
+
+typedef struct s_mlx
+{
+	t_img	*img;
+	void	*mlx;
+	void	*win;
+}	t_mlx;
+
+
 
 
 //int		ft_strlen(const char *str);
@@ -36,6 +56,7 @@ int		read_map(char *file_name, t_map *map);
 int		count_map_dimensions(char *file_name, t_map *map);
 int		check_symbols(t_map *map);
 int		clean_map(t_map *map);
+int		mlx_stuff(t_mlx *mlx);
 
 
 
