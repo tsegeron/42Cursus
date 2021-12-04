@@ -1,6 +1,6 @@
 CC = gcc
 
-FLAGS = -Wall -Wextra -Werror
+FLAGS =
 OPTFLAGS = -O2
 
 RM = rm -rf
@@ -18,7 +18,7 @@ FLDR_H	=	hdrs/
 FLDR_B	=	srcs_b/
 
 SRCS	=	read_map.c		check_symbols.c		map_dimensions.c	\
-			mlx_stuff.c
+			mlx_stuff.c		do_keys.c
 
 
 SRCS_B	=

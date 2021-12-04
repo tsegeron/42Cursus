@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/so_long
+CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/so_long
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gernesto/Desktop/so_long/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/so_long.dir/depend.make
@@ -68,29 +68,44 @@ include CMakeFiles/so_long.dir/flags.make
 
 CMakeFiles/so_long.dir/main.c.o: CMakeFiles/so_long.dir/flags.make
 CMakeFiles/so_long.dir/main.c.o: ../main.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gernesto/Desktop/so_long/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/so_long.dir/main.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/main.c.o -c /Users/gernesto/Desktop/so_long/main.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/so_long.dir/main.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/main.c.o -c /Users/gernesto/Desktop/MyGit/so_long/main.c
 
 CMakeFiles/so_long.dir/main.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/main.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gernesto/Desktop/so_long/main.c > CMakeFiles/so_long.dir/main.c.i
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gernesto/Desktop/MyGit/so_long/main.c > CMakeFiles/so_long.dir/main.c.i
 
 CMakeFiles/so_long.dir/main.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/main.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gernesto/Desktop/so_long/main.c -o CMakeFiles/so_long.dir/main.c.s
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gernesto/Desktop/MyGit/so_long/main.c -o CMakeFiles/so_long.dir/main.c.s
+
+CMakeFiles/so_long.dir/srcs/do_keys.c.o: CMakeFiles/so_long.dir/flags.make
+CMakeFiles/so_long.dir/srcs/do_keys.c.o: ../srcs/do_keys.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/so_long.dir/srcs/do_keys.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/so_long.dir/srcs/do_keys.c.o -c /Users/gernesto/Desktop/MyGit/so_long/srcs/do_keys.c
+
+CMakeFiles/so_long.dir/srcs/do_keys.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/so_long.dir/srcs/do_keys.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/gernesto/Desktop/MyGit/so_long/srcs/do_keys.c > CMakeFiles/so_long.dir/srcs/do_keys.c.i
+
+CMakeFiles/so_long.dir/srcs/do_keys.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/so_long.dir/srcs/do_keys.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/gernesto/Desktop/MyGit/so_long/srcs/do_keys.c -o CMakeFiles/so_long.dir/srcs/do_keys.c.s
 
 # Object files for target so_long
 so_long_OBJECTS = \
-"CMakeFiles/so_long.dir/main.c.o"
+"CMakeFiles/so_long.dir/main.c.o" \
+"CMakeFiles/so_long.dir/srcs/do_keys.c.o"
 
 # External object files for target so_long
 so_long_EXTERNAL_OBJECTS =
 
 so_long: CMakeFiles/so_long.dir/main.c.o
+so_long: CMakeFiles/so_long.dir/srcs/do_keys.c.o
 so_long: CMakeFiles/so_long.dir/build.make
 so_long: ../libmlx.a
 so_long: CMakeFiles/so_long.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gernesto/Desktop/so_long/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable so_long"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking C executable so_long"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/so_long.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -102,6 +117,6 @@ CMakeFiles/so_long.dir/clean:
 .PHONY : CMakeFiles/so_long.dir/clean
 
 CMakeFiles/so_long.dir/depend:
-	cd /Users/gernesto/Desktop/so_long/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gernesto/Desktop/so_long /Users/gernesto/Desktop/so_long /Users/gernesto/Desktop/so_long/cmake-build-debug /Users/gernesto/Desktop/so_long/cmake-build-debug /Users/gernesto/Desktop/so_long/cmake-build-debug/CMakeFiles/so_long.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/gernesto/Desktop/MyGit/so_long /Users/gernesto/Desktop/MyGit/so_long /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles/so_long.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/so_long.dir/depend
 

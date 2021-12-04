@@ -27,37 +27,46 @@ typedef struct s_map
 typedef struct s_img
 {
 	void	*img;
+	void	*img1;
+	char	*path;
+	int		width;
+	int		height;
+
 	char	*addr;
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		color;
+	int 	start_x;
+	int 	start_y;
+	int 	end_x;
+	int 	end_y;
 }	t_img;
 
 
 
 typedef struct s_mlx
 {
-	t_img	*img;
 	void	*mlx;
 	void	*win;
+	t_img	*entr;
+	t_img	*exit;
+	t_img	*hero;
+	t_img	*enem;
+	t_img	*coin;
 }	t_mlx;
 
 
 
-
-//int		ft_strlen(const char *str);
-//char	*ft_substr(char *s, int start, int len);
-//char	*ft_strjoin(char *s1, char *s2);
-//char	*ft_strdup(char *src);
-//char	*ft_strchr(char *s, char c);
-//char	*get_next_line(int fd, int buf_size);
 
 int		read_map(char *file_name, t_map *map);
 int		count_map_dimensions(char *file_name, t_map *map);
 int		check_symbols(t_map *map);
 int		clean_map(t_map *map);
 int		mlx_stuff(t_mlx *mlx);
-
+int		key_hook(int keycode, t_mlx *mlx);
+int		close_win(void);
+void	draw_area(t_mlx *mlx, int color);
 
 
 

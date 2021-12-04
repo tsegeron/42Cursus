@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/so_long.dir/main.c.o"
+  "CMakeFiles/so_long.dir/srcs/do_keys.c.o"
   "so_long"
   "so_long.pdb"
 )

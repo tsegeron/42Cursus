@@ -8,7 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/Users/gernesto/Desktop/so_long/main.c" "/Users/gernesto/Desktop/so_long/cmake-build-debug/CMakeFiles/so_long.dir/main.c.o"
+  "/Users/gernesto/Desktop/MyGit/so_long/main.c" "/Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles/so_long.dir/main.c.o"
+  "/Users/gernesto/Desktop/MyGit/so_long/srcs/do_keys.c" "/Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles/so_long.dir/srcs/do_keys.c.o"
   )
 set(CMAKE_C_COMPILER_ID "AppleClang")
 

@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/so_long
+CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/so_long
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gernesto/Desktop/so_long/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/so_long/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/so_long/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/so_long/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/so_long/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -153,6 +153,30 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/main.c.s
 .PHONY : main.c.s
 
+srcs/do_keys.o: srcs/do_keys.c.o
+.PHONY : srcs/do_keys.o
+
+# target to build an object file
+srcs/do_keys.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/do_keys.c.o
+.PHONY : srcs/do_keys.c.o
+
+srcs/do_keys.i: srcs/do_keys.c.i
+.PHONY : srcs/do_keys.i
+
+# target to preprocess a source file
+srcs/do_keys.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/do_keys.c.i
+.PHONY : srcs/do_keys.c.i
+
+srcs/do_keys.s: srcs/do_keys.c.s
+.PHONY : srcs/do_keys.s
+
+# target to generate assembly for a file
+srcs/do_keys.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/do_keys.c.s
+.PHONY : srcs/do_keys.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... srcs/do_keys.o"
+	@echo "... srcs/do_keys.i"
+	@echo "... srcs/do_keys.s"
 .PHONY : help
 
 

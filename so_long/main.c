@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/02 21:40:07 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/03 23:14:27 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ int	main(int ac, char *av[])
 
 	if (ac != 2 || !read_map(av[1], &map))
 		return (print_map_error());
-//	if (!mlx_stuff(&mlx))
-//		return (print_map_error());
 	mlx_stuff(&mlx);
 
 	mlx_loop(mlx.mlx);

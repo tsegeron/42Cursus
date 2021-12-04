@@ -6,3 +6,8 @@ CMakeFiles/so_long.dir/main.c.o: \
  ../hdrs/so_long.h \
  ../libft/libft.h \
  ../main.c
+CMakeFiles/so_long.dir/srcs/do_keys.c.o: \
+ ../hdrs/mlx.h \
+ ../hdrs/so_long.h \
+ ../libft/libft.h \
+ ../srcs/do_keys.c
