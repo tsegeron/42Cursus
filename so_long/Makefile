@@ -18,7 +18,8 @@ FLDR_H	=	hdrs/
 FLDR_B	=	srcs_b/
 
 SRCS	=	read_map.c		check_symbols.c		map_dimensions.c	\
-			mlx_stuff.c		do_keys.c
+			mlx_stuff.c		do_keys.c			make_enem_move.c	\
+			start_game.c
 
 
 SRCS_B	=

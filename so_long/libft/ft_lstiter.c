@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../hdrs/libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(int))
 {
 	while (lst != NULL)
 	{
-		f(lst->content);
+		f(lst->x);
+		f(lst->y);
 		lst = lst->next;
 	}
 }

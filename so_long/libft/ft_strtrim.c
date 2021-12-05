@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../hdrs/libft.h"
 #include <stdio.h>
 
 static int	ft_check_start(const char *str, char const *set)

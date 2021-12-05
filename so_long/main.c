@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/03 23:14:27 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/05 11:23:05 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,12 @@ static int	print_map_error(void)
 int	main(int ac, char *av[])
 {
 	t_map	map;
-	t_mlx	mlx;
 
-
+	map.mlx = malloc(sizeof(t_mlx));
 	if (ac != 2 || !read_map(av[1], &map))
 		return (print_map_error());
-	mlx_stuff(&mlx);
-
-	mlx_loop(mlx.mlx);
-
-
-
-
+	mlx_stuff(&map);
+	mlx_loop(map.mlx->mlx);
 
 	return (0);
 }

@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../hdrs/libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void *))
+void	ft_lstclear(t_list **lst, void (*del)(int))
 {
 	t_list	*tmp;
 	t_list	*prev_ptr;
@@ -23,7 +23,9 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 	while (tmp != NULL)
 	{
 		prev_ptr = tmp->next;
-		del(tmp->content);
+		del(tmp->list_position);
+		del(tmp->x);
+		del(tmp->y);
 		free(tmp);
 		tmp = prev_ptr;
 	}

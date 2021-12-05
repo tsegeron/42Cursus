@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../hdrs/libft.h"
 
 void	*ft_realloc(void **src, size_t size)
 {

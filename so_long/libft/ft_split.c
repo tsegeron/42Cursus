@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../hdrs/libft.h"
 
 static int	ft_substrs_count(char const *s, char c)
 {

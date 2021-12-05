@@ -56,7 +56,7 @@ int	check_symbols(t_map *map)
 			if (!check_sym(map->data[j][i], map))
 				return (0);
 	}
-	if (!map->count_entries || !map->count_exits || !map->count_coins)
+	if (map->count_entries != 1 || !map->count_exits || !map->count_coins)
 		return (0);
 	return (1);
 }

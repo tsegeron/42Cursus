@@ -6,15 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/gernesto/Desktop/MyGit/so_long/hdrs/mlx.h
-
-/Users/gernesto/Desktop/MyGit/so_long/hdrs/so_long.h
-mlx.h
-/Users/gernesto/Desktop/MyGit/so_long/hdrs/mlx.h
-../libft/libft.h
-/Users/gernesto/Desktop/MyGit/so_long/libft/libft.h
-
-/Users/gernesto/Desktop/MyGit/so_long/libft/libft.h
+/Users/gernesto/Desktop/MyGit/so_long/hdrs/libft.h
 stdio.h
 -
 stdlib.h
@@ -26,9 +18,13 @@ stddef.h
 fcntl.h
 -
 
-/Users/gernesto/Desktop/MyGit/so_long/main.c
-hdrs/so_long.h
+/Users/gernesto/Desktop/MyGit/so_long/hdrs/mlx.h
+
 /Users/gernesto/Desktop/MyGit/so_long/hdrs/so_long.h
+mlx.h
+/Users/gernesto/Desktop/MyGit/so_long/hdrs/mlx.h
+libft.h
+/Users/gernesto/Desktop/MyGit/so_long/hdrs/libft.h
 
 /Users/gernesto/Desktop/MyGit/so_long/srcs/do_keys.c
 ../hdrs/so_long.h

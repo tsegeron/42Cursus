@@ -177,6 +177,54 @@ srcs/do_keys.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/do_keys.c.s
 .PHONY : srcs/do_keys.c.s
 
+srcs/make_enem_move.o: srcs/make_enem_move.c.o
+.PHONY : srcs/make_enem_move.o
+
+# target to build an object file
+srcs/make_enem_move.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/make_enem_move.c.o
+.PHONY : srcs/make_enem_move.c.o
+
+srcs/make_enem_move.i: srcs/make_enem_move.c.i
+.PHONY : srcs/make_enem_move.i
+
+# target to preprocess a source file
+srcs/make_enem_move.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/make_enem_move.c.i
+.PHONY : srcs/make_enem_move.c.i
+
+srcs/make_enem_move.s: srcs/make_enem_move.c.s
+.PHONY : srcs/make_enem_move.s
+
+# target to generate assembly for a file
+srcs/make_enem_move.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/make_enem_move.c.s
+.PHONY : srcs/make_enem_move.c.s
+
+srcs/start_game.o: srcs/start_game.c.o
+.PHONY : srcs/start_game.o
+
+# target to build an object file
+srcs/start_game.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/start_game.c.o
+.PHONY : srcs/start_game.c.o
+
+srcs/start_game.i: srcs/start_game.c.i
+.PHONY : srcs/start_game.i
+
+# target to preprocess a source file
+srcs/start_game.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/start_game.c.i
+.PHONY : srcs/start_game.c.i
+
+srcs/start_game.s: srcs/start_game.c.s
+.PHONY : srcs/start_game.s
+
+# target to generate assembly for a file
+srcs/start_game.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/so_long.dir/build.make CMakeFiles/so_long.dir/srcs/start_game.c.s
+.PHONY : srcs/start_game.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +240,12 @@ help:
 	@echo "... srcs/do_keys.o"
 	@echo "... srcs/do_keys.i"
 	@echo "... srcs/do_keys.s"
+	@echo "... srcs/make_enem_move.o"
+	@echo "... srcs/make_enem_move.i"
+	@echo "... srcs/make_enem_move.s"
+	@echo "... srcs/start_game.o"
+	@echo "... srcs/start_game.i"
+	@echo "... srcs/start_game.s"
 .PHONY : help
 
 

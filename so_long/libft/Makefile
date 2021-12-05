@@ -11,7 +11,7 @@ AR = ar rcs
 NAME = libft.a
 #ENAME = exec
 
-HDRS = libft.h
+HDRS = ../hdrs/libft.h
 
 SRCS =		ft_isalpha.c		ft_isdigit.c		ft_isalnum.c	\
 			ft_isascii.c		ft_isprint.c		ft_strlen.c		\

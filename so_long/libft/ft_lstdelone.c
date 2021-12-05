@@ -10,13 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../hdrs/libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(int))
 {
 	if (lst || del)
 	{
-		del(lst->content);
+		del(lst->list_position);
+		del(lst->x);
+		del(lst->y);
 		free(lst);
 	}
 }
