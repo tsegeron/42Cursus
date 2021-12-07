@@ -1,50 +1,48 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: gernesto <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/10/19 23:35:58 by gernesto          #+#    #+#              #
-#   Updated: 2021/10/20 06:26:10 by gernesto         ###   ########.fr       # #
-#                                                                              #
-# **************************************************************************** #
+CC			=	gcc
 
-CC = gcc
+FLAGS		=	-Wall -Wextra -Werror
+FLAGS_MLX	=	-framework OpenGL -framework AppKit
+OPTFLAGS	=	-O2
+#BON_FLG0	=	-D BONUS=0
+BON_FLG1	=	-D BONUS=1
 
-FLAGS = -Wall -Wextra -Werror
-OPTFLAGS = -O2
-
-RM = rm -rf
-AR = ar rcs
+RM			=	rm -rf
+AR			=	ar rcs
 
 # ------------------------------------------------------------------------------
 
-NAME 	=	libftprintf.a
-#ENAME	=	exec
+NAME 	=	so_long
+NAME_B	=	so_long_bonus
+LIB		=	libmlx.a
+LIB1	=	libft.a
+LIB2	=	so_long.a
+LIB3	=	so_long_b.a
 
-HDRS	=	printft.h
+HDRS	=	so_long.h
+HDRS_B	=	so_long_b.h
 
-SRCS	=	ft_printf.c			ft_strlen.c			ft_putchar_fd_c.c	\
-			ft_itoa.c			ft_itoa_uns.c		ft_itoa_hex.c		\
-			ft_toupper.c		check_conv.c		ft_putstr_fd_c.c	\
-			zero_struct.c		do_flags.c			do_cases.c			\
-			do_case_c.c			do_case_s.c			do_case_p.c			\
-			do_case_di.c		do_case_u.c			do_case_x.c			\
-			do_case_x_up.c		do_case_perc.c		ft_itoa_lhex.c
+FLDR_S	=	srcs/
+FLDR_B	=	srcs_b/
+FLDR_H	=	hdrs/
+
+MAIN	=	main.c
+
+SRCS	=	read_map.c		check_symbols.c		map_dimensions.c	\
+			mlx_stuff.c		do_keys.c			make_enem_move.c	\
+			start_game.c	draw_map.c			game_stuff.c		\
 
 
-#SRCS_B	=
+SRC		=	$(addprefix ${FLDR_S},${SRCS})
+SRCB	=	$(addprefix ${FLDR_B},${SRCS})
+HDR		=	$(addprefix ${FLDR_H},${HDRS})
+HDR_B	=	$(addprefix ${FLDR_H},${HDRS_B})
+OBJS	=	${SRC:%.c=%.o}
+OBJS_B	=	${SRCB:%.c=%.o}
 
-OBJS	=	${SRCS:%.c=%.o}
+# ------------------------------------------------------------------------------
 
-#OBJS_B	=	${SRCS_B:%.c=%.o}
-
-#DIR		=	sources/
-#SUBDIR	=	libft
-#D_INC	=	includes
-
-READY	=	Library is assembled
+READY	=	So_long ready to be launched
+READYB	=	So_long_bonus ready to be launched
 SWEPT	=	Directory was cleaned
 _GREEN	=	\e[32m
 _YELLOW	=	\e[33m
@@ -55,15 +53,20 @@ _END	=	\e[0m
 
 #%.o:		${SRCS} ${HDRS}
 #			@${CC} ${FLAGS} -c $< -o $@
-%.o:		%.c	${HDRS}
+%.o:		%.c	${HDR}
 			@${CC} ${FLAGS} ${OPTFLAGS} -c -o $@ $<
 
 
-
-${NAME}: 	${OBJS}	${HDRS}
-#			@${MAKE} -C libft
-#			@mv libft/libft.a ${NAME}
-			@${AR} ${NAME} $?
+${NAME}: 	${OBJS}
+			@${MAKE} -C mlx
+			@mv mlx/libmlx.a ${LIB}
+			@${MAKE} -C libft
+			@mv libft/libft.a ${LIB1}
+			@${AR} ${LIB2} $?
+			@${RM} ${OBJS}
+			@${MAKE} clean -C mlx
+			@${CC} ${FLAGS_MLX} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} ${LIB1} ${LIB2} -o ${NAME}
+			@${RM} ${OBJS} ${LIB} ${LIB1} ${LIB2}
 			@printf "${_GREEN}${READY}${_END}\n"
 
 
@@ -71,26 +74,34 @@ all:		${NAME}
 
 clean:
 			@${RM} ${OBJS}
-#			@${MAKE} -C libft
 			@printf "${_YELLOW}${SWEPT}${_END}\n"
 
 fclean:		clean
-			@${RM} ${NAME}
+			@${RM} ${LIB} ${LIB1} ${LIB2} ${LIB3} ${NAME} ${NAME_B}
 
 re:			fclean all
 
-bonus:		${NAME}
-
+bonus:		${OBJS_B}
+			@${MAKE} -C mlx
+			@mv mlx/libmlx.a ${LIB}
+			@${MAKE} -C libft
+			@mv libft/libft.a ${LIB1}
+			@${AR} ${LIB3} $?
+			@${RM} ${OBJS_B}
+			@${MAKE} clean -C mlx
+			@${CC} ${FLAGS_MLX} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} ${LIB1} ${LIB3} -o ${NAME_B}
+			@${RM} ${OBJS_B} ${LIB} ${LIB1} ${LIB3}
+			@printf "${_GREEN}${READYB}${_END}\n"
 
 
 main:
-			@${CC} ${FLAGS} ${OPTFLAGS} main.c ${NAME}
+			@${CC} ${FLAGS} ${OPTFLAGS} main.c ${LIB}
 
 test:
-			@${CC} ${FLAGS} ${OPTFLAGS} test.c ${NAME}
+			@${CC} ${FLAGS} ${OPTFLAGS} test.c ${LIB}
 
 norm:
-			@norminette ${SRCS}
+			@norminette ${SRC} ${MAIN}
 
 
 #exec:		${SRCS}

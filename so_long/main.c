@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 06:40:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/05 11:23:05 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/06 23:33:34 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,12 @@ int	main(int ac, char *av[])
 		return (print_map_error());
 	mlx_stuff(&map);
 	mlx_loop(map.mlx->mlx);
-
 	return (0);
 }
 /*
 	for(int i = 0; map.data[i]; i++)
 		printf("%s", map.data[i]);
 
+	free images
 
-	mlx.mlx = mlx_init();
-	mlx.win = mlx_new_window(mlx.mlx, 1920, 1080, "Ducksuck!");
-	mlx.img->img = mlx_new_image(mlx.mlx, 1920, 1080);
-	mlx.img->addr = mlx_get_data_addr(mlx.img->img, &mlx.img->bits_per_pixel, &mlx.img->line_length,
-									   &mlx.img->endian);
-	my_mlx_pixel_put(&mlx, 5, 5, 0x00FF0000);
-	mlx_put_image_to_window(mlx.mlx, mlx.win, mlx.img->img, 0, 0);
-	mlx_loop(mlx.mlx);
-*/
+ */
