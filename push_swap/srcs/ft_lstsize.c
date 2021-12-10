@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   check_args.c                                       :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 22:07:45 by gernesto          #+#    #+#             */
-/*   Updated: 2021/11/30 14:48:27 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/10 22:30:26 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 16:36:47 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../hdrs/push_swap.h"
 
-int	check_args(int **a, int **b, int ac, char *av[])
+int	ft_lstsize(t_list *lst)
 {
-	int		check_zero;
-	int	i;
-
-	i = -1;
-	if (ac < 2)
+	if (lst == NULL)
 		return (0);
-	while (*av)
-	{
-		check_zero = 0;
-		(*a)[++i] = ft_atoi(*av++, &check_zero);
-		if (!((*a)[i]) && !check_zero)
-		{
-			free (*a);
-			free (*b);
-			return (0);
-		}
-	}
-	return (1);
+	if ((lst->next) == NULL)
+		return (1);
+	else
+		return (ft_lstsize(lst->next) + 1);
 }
