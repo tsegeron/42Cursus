@@ -1,56 +1,64 @@
 #include "../hdrs/push_swap.h"
 
-void	sa(t_list **a, int q)
+void	sa(sts *s, int q)
 {
-	int	tmp;
+	t_list	*tmp1;
+	t_list	*tmp2;
 
-	tmp = (*a)->num;
-	if (ft_lstsize(*a) > 1)
+	tmp1 = s->a;
+	tmp2 = s->a->next;
+	if (ft_lstsize(s->a) > 1)
 	{
-		(*a)->num = (*a)->next->num;
-		(*a)->next->num = tmp;
+		s->a = tmp2;
+		tmp1->next = tmp2->next;
+		tmp2->next = tmp1;
 		if (!q)
 			write(1, "sa\n", 3);
 	}
 }
 
-void	sb(t_list **b, int q)
+void	sb(sts *s, int q)
 {
-	int	tmp;
+	t_list	*tmp1;
+	t_list	*tmp2;
 
-	tmp = (*b)->num;
-	if (ft_lstsize(*b) > 1)
+	tmp1 = s->b;
+	tmp2 = s->b->next;
+	if (ft_lstsize(s->b) > 1)
 	{
-		(*b)->num = (*b)->next->num;
-		(*b)->next->num = tmp;
+		s->b = tmp2;
+		tmp1->next = tmp2->next;
+		tmp2->next = tmp1;
 		if (!q)
 			write(1, "sb\n", 3);
 	}
 }
 
-void	ss(t_list **a, t_list **b)
+void	ss(sts *s, int q)
 {
-	sa(a, 1);
-	sb(b, 1);
+	sa(s, 1);
+	sb(s, 1);
 	write(1, "ss\n", 3);
 }
 
-void	pa(t_list **a, int q)
+void	pa(sts *s, int q)
 {
-	if (ft_lstsize(*b) > 0)
+	if (ft_lstsize(s->b) > 0)
 	{
-
+		ft_lstadd_front(&s->a, s->b);
+//		ft_lstdelone(s->b);
 		if (!q)
 			write(1, "pa\n", 3);
 	}
 
 }
 
-void	pb(t_list **b, int q)
+void	pb(sts *s, int q)
 {
-	if (ft_lstsize(*a) > 0)
+	if (ft_lstsize(s->a) > 0)
 	{
-
+		ft_lstadd_front(&s->b, s->a);
+//		ft_lstdelone(s->b);
 		if (!q)
 			write(1, "pb\n", 3);
 	}

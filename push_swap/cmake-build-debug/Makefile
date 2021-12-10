@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/push_swap
+CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gernesto/Desktop/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/push_swap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -224,6 +224,78 @@ srcs/ft_lstadd_back.s: srcs/ft_lstadd_back.c.s
 srcs/ft_lstadd_back.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_back.c.s
 .PHONY : srcs/ft_lstadd_back.c.s
+
+srcs/ft_lstadd_front.o: srcs/ft_lstadd_front.c.o
+.PHONY : srcs/ft_lstadd_front.o
+
+# target to build an object file
+srcs/ft_lstadd_front.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.o
+.PHONY : srcs/ft_lstadd_front.c.o
+
+srcs/ft_lstadd_front.i: srcs/ft_lstadd_front.c.i
+.PHONY : srcs/ft_lstadd_front.i
+
+# target to preprocess a source file
+srcs/ft_lstadd_front.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.i
+.PHONY : srcs/ft_lstadd_front.c.i
+
+srcs/ft_lstadd_front.s: srcs/ft_lstadd_front.c.s
+.PHONY : srcs/ft_lstadd_front.s
+
+# target to generate assembly for a file
+srcs/ft_lstadd_front.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.s
+.PHONY : srcs/ft_lstadd_front.c.s
+
+srcs/ft_lstclear.o: srcs/ft_lstclear.c.o
+.PHONY : srcs/ft_lstclear.o
+
+# target to build an object file
+srcs/ft_lstclear.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.o
+.PHONY : srcs/ft_lstclear.c.o
+
+srcs/ft_lstclear.i: srcs/ft_lstclear.c.i
+.PHONY : srcs/ft_lstclear.i
+
+# target to preprocess a source file
+srcs/ft_lstclear.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.i
+.PHONY : srcs/ft_lstclear.c.i
+
+srcs/ft_lstclear.s: srcs/ft_lstclear.c.s
+.PHONY : srcs/ft_lstclear.s
+
+# target to generate assembly for a file
+srcs/ft_lstclear.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.s
+.PHONY : srcs/ft_lstclear.c.s
+
+srcs/ft_lstdelone.o: srcs/ft_lstdelone.c.o
+.PHONY : srcs/ft_lstdelone.o
+
+# target to build an object file
+srcs/ft_lstdelone.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.o
+.PHONY : srcs/ft_lstdelone.c.o
+
+srcs/ft_lstdelone.i: srcs/ft_lstdelone.c.i
+.PHONY : srcs/ft_lstdelone.i
+
+# target to preprocess a source file
+srcs/ft_lstdelone.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.i
+.PHONY : srcs/ft_lstdelone.c.i
+
+srcs/ft_lstdelone.s: srcs/ft_lstdelone.c.s
+.PHONY : srcs/ft_lstdelone.s
+
+# target to generate assembly for a file
+srcs/ft_lstdelone.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.s
+.PHONY : srcs/ft_lstdelone.c.s
 
 srcs/ft_lstlast.o: srcs/ft_lstlast.c.o
 .PHONY : srcs/ft_lstlast.o
@@ -366,6 +438,15 @@ help:
 	@echo "... srcs/ft_lstadd_back.o"
 	@echo "... srcs/ft_lstadd_back.i"
 	@echo "... srcs/ft_lstadd_back.s"
+	@echo "... srcs/ft_lstadd_front.o"
+	@echo "... srcs/ft_lstadd_front.i"
+	@echo "... srcs/ft_lstadd_front.s"
+	@echo "... srcs/ft_lstclear.o"
+	@echo "... srcs/ft_lstclear.i"
+	@echo "... srcs/ft_lstclear.s"
+	@echo "... srcs/ft_lstdelone.o"
+	@echo "... srcs/ft_lstdelone.i"
+	@echo "... srcs/ft_lstdelone.s"
 	@echo "... srcs/ft_lstlast.o"
 	@echo "... srcs/ft_lstlast.i"
 	@echo "... srcs/ft_lstlast.s"

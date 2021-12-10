@@ -1,6 +1,6 @@
 #include "../hdrs/push_swap.h"
 
-static void	fill_stack_a(t_list **a, char *av[])
+static void	fill_stack_a(sts *s, char *av[])
 {
 	int	i;
 	int	check_zero;
@@ -9,49 +9,51 @@ static void	fill_stack_a(t_list **a, char *av[])
 	while (*av)
 	{
 		check_zero = 0;
-		ft_lstadd_back(a, ft_lstnew(ft_atoi(*av++, &check_zero), i++));
-		if (!(*a)->num && !check_zero)
+		ft_lstadd_back(&s->a, ft_lstnew(ft_atoi(*av++, &check_zero), i++));
+		if (!s->a->num && !check_zero)
 		{
-			free (*a);
+			free (s->a); // дописать функцию по очистке всего списка
 			return ;
 		}
 	}
 }
 
-static void	fill_stack_sorted(t_list **sorted, t_list **a, int ac)
+static void	fill_stack_sorted(sts *s, int ac)
 {
 	t_list	*tmp;
-	int	s[ac - 1];
+	int	so[ac - 1];
 	int	i;
 
 	i = 0;
-	tmp = *a;
+	tmp = s->a;
 
-	while ((*a))
+	while (s->a)
 	{
-		s[i++] = (*a)->num;
-		(*a) = (*a)->next;
+		so[i++] = s->a->num;
+		s->a = s->a->next;
 	}
-	*a = tmp;
-	merge_sort(s, 0, ac - 2);
+	s->a = tmp;
+	merge_sort(so, 0, ac - 2);
 	i = -1;
 	while (++i < ac - 1)
-		ft_lstadd_back(sorted, ft_lstnew(s[i], i));
+		ft_lstadd_back(&s->sorted, ft_lstnew(so[i], i));
 }
 
 int	main(int ac, char *av[])
 {
-	t_list	*a;
-	t_list	*b;
-	t_list	*sorted;
+	sts	s;
 
 	if (ac < 2)
 		return (0);
-	a = NULL;
-	sorted = NULL;
-	fill_stack_a(&a, ++av);
-	fill_stack_sorted(&sorted, &a, ac);
-	sa(&a, 0);
+	s.a = NULL;
+	s.b = NULL;
+	s.sorted = NULL;
+	fill_stack_a(&s, ++av);
+	fill_stack_sorted(&s, ac);
+	sa(&s, 0);
+	pb(&s, 0);
+//	pb(&s, 0);
+//	printf("%d", a->num);
 
 
 
@@ -60,16 +62,22 @@ int	main(int ac, char *av[])
 
 
 //	printf("Before\n");
-while (a)
+while (s.a)
 {
-	printf("%d -> %d\n", a->i, a->num);
-	a = a->next;
+	printf("%d ", s.a->num);
+	s.a = s.a->next;
+}
+	printf("\n");
+while (s.b)
+{
+	printf("%d ", s.b->num);
+	s.b = s.b->next;
 }
 //	printf("\nAfter\n");
-//while (sorted)
+//while (s.sorted)
 //{
-//	printf("%d -> %d\n", sorted->i, sorted->num);
-//	sorted = sorted->next;
+//	printf("%d ", s.sorted->num);
+//	s.sorted = s.sorted->next;
 //}
 
 	return (0);

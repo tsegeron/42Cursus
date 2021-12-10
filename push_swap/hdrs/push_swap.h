@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/10 12:28:24 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/10 19:32:09 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,16 +29,16 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-//typedef struct stucks
-//{
-//	int		len_a;
-//	int		len_b;
-//	t_list	*a;
-//	t_list	*b;
-//	t_list	*sorted;
+typedef struct stucks
+{
+	int		len_a;
+	int		len_b;
+	t_list	*a;
+	t_list	*b;
+	t_list	*sorted;
 //	int
-//
-//}	sts;
+
+}	sts;
 
 
 
@@ -47,15 +47,25 @@ int		ft_atoi(const char *str, int *check_zero);
 void	merge_sort(int a[], size_t start, size_t end);
 
 int		ft_lstsize(t_list *lst);
+void	ft_lstdelone(t_list *lst);
+void	ft_lstclear(t_list **lst);
 void	ft_lstadd_back(t_list **lst, t_list *new);
-t_list	*ft_lstlast(t_list *lst);
+void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstnew(int num, int i);
+t_list	*ft_lstlast(t_list *lst);
 
-void	sa(t_list **a, int q);
-void	sb(t_list **b, int q);
-void	ss(t_list **a, t_list **b);
-void	pa(t_list **a, int q);
-void	pb(t_list **b, int q);
+void	sa(sts *s, int q);
+void	sb(sts *s, int q);
+void	ss(sts *s, int q);
+void	pa(sts *s, int q);
+void	pb(sts *s, int q);
+void	ra(sts *s, int q);
+void	rb(sts *s, int q);
+void	rr(sts *s, int q);
+void	rra(sts *s, int q);
+void	rrb(sts *s, int q);
+void	rrr(sts *s, int q);
+
 
 
 

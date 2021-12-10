@@ -8,6 +8,9 @@ add_executable(push_swap
         srcs/check_args.c
         srcs/ft_atoi.c
         srcs/ft_lstadd_back.c
+        srcs/ft_lstadd_front.c
+        srcs/ft_lstclear.c
+        srcs/ft_lstdelone.c
         srcs/ft_lstlast.c
         srcs/ft_lstnew.c
         srcs/ft_lstsize.c
@@ -15,4 +18,7 @@ add_executable(push_swap
         srcs/merge_sort.c
 #        srcs/test.c
         srcs/test1.c
+#        srcs/
+#        srcs/
+#        srcs/
         )

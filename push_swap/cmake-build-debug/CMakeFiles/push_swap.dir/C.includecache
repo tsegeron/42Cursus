@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/gernesto/Desktop/push_swap/hdrs/push_swap.h
+/Users/gernesto/Desktop/MyGit/push_swap/hdrs/push_swap.h
 stdlib.h
 -
 unistd.h
@@ -14,7 +14,7 @@ unistd.h
 stdio.h
 -
 
-/Users/gernesto/Desktop/push_swap/srcs/ft_lstsize.c
+/Users/gernesto/Desktop/MyGit/push_swap/srcs/test1.c
 ../hdrs/push_swap.h
-/Users/gernesto/Desktop/push_swap/hdrs/push_swap.h
+/Users/gernesto/Desktop/MyGit/push_swap/hdrs/push_swap.h
 

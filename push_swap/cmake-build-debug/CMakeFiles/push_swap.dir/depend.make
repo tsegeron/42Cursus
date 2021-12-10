@@ -13,6 +13,15 @@ CMakeFiles/push_swap.dir/srcs/ft_atoi.c.o: \
 CMakeFiles/push_swap.dir/srcs/ft_lstadd_back.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/ft_lstadd_back.c
+CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/ft_lstadd_front.c
+CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/ft_lstclear.c
+CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/ft_lstdelone.c
 CMakeFiles/push_swap.dir/srcs/ft_lstlast.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/ft_lstlast.c
