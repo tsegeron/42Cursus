@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/02 06:41:09 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/06 23:01:57 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/10 16:03:35 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ static void	zero_map(t_map *map)
 
 static int	check_map_name(char *file_name)
 {
+	if (ft_strlen(file_name) < 10)
+		return (0);
 	if (!ft_strnstr(file_name + ft_strlen(file_name) - 4, ".ber", 4))
 		return (0);
 	return (1);
@@ -35,21 +37,21 @@ static void	do_actual_setting(int i, int j, char ch, t_map *map)
 {
 	static int	c = 1;
 	static int	x = 1;
+	static int	e = 1;
 
 	if (c == 1)
 		map->coin = NULL;
 	if (x == 1)
 		map->enem = NULL;
+	if (e == 1)
+		map->exit = NULL;
 	if (ch == 'P')
 	{
 		map->hero->x = j;
 		map->hero->y = i;
 	}
 	else if (ch == 'E')
-	{
-		map->exit->x = j;
-		map->exit->y = i;
-	}
+		ft_lstadd_back(&map->exit, ft_lstnew(e++, j, i));
 	else if (ch == 'C')
 		ft_lstadd_back(&map->coin, ft_lstnew(c++, j, i));
 	else if (ch == 'X')

@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:46:03 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/06 22:46:03 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:07:55 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,21 @@
 
 static void	go_bot(t_map *map);
 static void	go_top(t_map *map);
+static void	go_right(t_map *map);
+static void	go_left(t_map *map);
 
 static void	go_right(t_map *map)
 {
 	if (map->data[map->enem->y][map->enem->x + 1] != '1')
+	{
+		if (!check_pos(map, map->enem->list_position, \
+		map->enem->x + 1, map->enem->y))
+		{
+			go_bot(map);
+			return ;
+		}
 		map->enem->x++;
+	}
 	else
 		go_bot(map);
 }
@@ -26,7 +36,15 @@ static void	go_right(t_map *map)
 static void	go_left(t_map *map)
 {
 	if (map->data[map->enem->y][map->enem->x - 1] != '1')
+	{
+		if (!check_pos(map, map->enem->list_position, \
+		map->enem->x - 1, map->enem->y))
+		{
+			go_top(map);
+			return ;
+		}
 		map->enem->x--;
+	}
 	else
 		go_top(map);
 }
@@ -34,7 +52,15 @@ static void	go_left(t_map *map)
 static void	go_bot(t_map *map)
 {
 	if (map->data[map->enem->y + 1][map->enem->x] != '1')
+	{
+		if (!check_pos(map, map->enem->list_position, \
+		map->enem->x, map->enem->y + 1))
+		{
+			go_left(map);
+			return ;
+		}
 		map->enem->y++;
+	}
 	else
 		go_left(map);
 }
@@ -42,7 +68,15 @@ static void	go_bot(t_map *map)
 static void	go_top(t_map *map)
 {
 	if (map->data[map->enem->y - 1][map->enem->x] != '1')
+	{
+		if (!check_pos(map, map->enem->list_position, \
+		map->enem->x, map->enem->y - 1))
+		{
+			go_right(map);
+			return ;
+		}
 		map->enem->y--;
+	}
 	else
 		go_right(map);
 }

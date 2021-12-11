@@ -6,14 +6,14 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:56:14 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/07 02:51:40 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:22:24 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# include "mlx.h"
+# include "../mlx/mlx.h"
 # include "libft.h"
 
 # ifndef BONUS
@@ -55,7 +55,7 @@ typedef struct s_mlx
 typedef struct s_map
 {
 	t_hero	*hero;
-	t_hero	*exit;
+	t_list	*exit;
 	t_list	*coin;
 	t_list	*enem;
 	t_mlx	*mlx;
@@ -78,6 +78,7 @@ int		clean_map(t_map *map);
 int		mlx_stuff(t_map *map);
 int		do_keys(int keycode, t_map *map);
 int		close_win(void);
+int		check_pos(t_map *map, int pos, int x, int y);
 void	start_game(t_map *map);
 void	draw_map(t_map *map);
 void	draw_objects(t_map *map);

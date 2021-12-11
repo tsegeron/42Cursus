@@ -1,6 +1,6 @@
 CC			=	gcc
-
-FLAGS		=	-Wall -Wextra -Werror
+#-Wall -Wextra -Werror
+FLAGS		=
 FLAGS_MLX	=	-framework OpenGL -framework AppKit
 OPTFLAGS	=	-O2
 #BON_FLG0	=	-D BONUS=0
@@ -59,49 +59,51 @@ _END	=	\e[0m
 
 ${NAME}: 	${OBJS}
 			@${MAKE} -C mlx
-			@mv mlx/libmlx.a ${LIB}
+			@cp mlx/libmlx.a ${LIB}
 			@${MAKE} -C libft
-			@mv libft/libft.a ${LIB1}
+			@cp libft/libft.a ${LIB1}
 			@${AR} ${LIB2} $?
-			@${RM} ${OBJS}
-			@${MAKE} clean -C mlx
+#			@${RM} ${OBJS}
+#			@${MAKE} clean -C mlx
 			@${CC} ${FLAGS_MLX} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} ${LIB1} ${LIB2} -o ${NAME}
-			@${RM} ${OBJS} ${LIB} ${LIB1} ${LIB2}
+#			@${RM} ${OBJS} ${LIB} ${LIB1} ${LIB2}
 			@printf "${_GREEN}${READY}${_END}\n"
 
 
 all:		${NAME}
 
 clean:
-			@${RM} ${OBJS}
+			@${MAKE} fclean -C libft
+			@${MAKE} clean -C mlx
+			@${RM} ${OBJS} ${OBJS_B} ${LIB} ${LIB1} ${LIB2} ${LIB3} mlx/libmlx.a
 			@printf "${_YELLOW}${SWEPT}${_END}\n"
 
 fclean:		clean
-			@${RM} ${LIB} ${LIB1} ${LIB2} ${LIB3} ${NAME} ${NAME_B}
+			@${RM} ${NAME} ${NAME_B}
 
 re:			fclean all
 
 bonus:		${OBJS_B}
 			@${MAKE} -C mlx
-			@mv mlx/libmlx.a ${LIB}
+			@cp mlx/libmlx.a ${LIB}
 			@${MAKE} -C libft
-			@mv libft/libft.a ${LIB1}
+			@cp libft/libft.a ${LIB1}
 			@${AR} ${LIB3} $?
-			@${RM} ${OBJS_B}
-			@${MAKE} clean -C mlx
+#			@${RM} ${OBJS_B}
+#			@${MAKE} clean -C mlx
 			@${CC} ${FLAGS_MLX} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} ${LIB1} ${LIB3} -o ${NAME_B}
-			@${RM} ${OBJS_B} ${LIB} ${LIB1} ${LIB3}
+#			@${RM} ${OBJS_B} ${LIB} ${LIB1} ${LIB3}
 			@printf "${_GREEN}${READYB}${_END}\n"
 
 
-main:
-			@${CC} ${FLAGS} ${OPTFLAGS} main.c ${LIB}
+#main:
+#			@${CC} ${FLAGS} ${OPTFLAGS} main.c ${LIB}
 
-test:
-			@${CC} ${FLAGS} ${OPTFLAGS} test.c ${LIB}
+#test:
+#			@${CC} ${FLAGS} ${OPTFLAGS} test.c ${LIB}
 
 norm:
-			@norminette ${SRC} ${MAIN}
+			@norminette ${MAIN} ${FLDR_H} ${FLDR_S} ${FLDR_B} libft
 
 
 #exec:		${SRCS}

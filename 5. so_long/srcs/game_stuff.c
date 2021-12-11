@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:46:31 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/06 22:46:45 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:25:56 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,25 @@
 
 int	close_win(void)
 {
-	sleep(1);
 	exit(0);
 }
 
 void	game_won(t_map *map)
 {
-	map->close_state = 1;
-	close_win();
+	t_list	*tmp;
+
+	tmp = map->exit;
+	while (map->exit != NULL)
+	{
+		if (map->exit->x == map->hero->x \
+		&& map->exit->y == map->hero->y && map->count_coins == 0)
+		{
+			map->close_state = 1;
+			close_win();
+		}
+		map->exit = map->exit->next;
+	}
+	map->exit = tmp;
 }
 
 void	game_lost(t_map *map)

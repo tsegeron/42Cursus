@@ -48,7 +48,7 @@ OBJS_B =	${SRCS_B:%.c=%.o}
 
 ${NAME}: 	${OBJS} ${HDRS}
 			@${AR} ${NAME} $?
-			@${RM} ${OBJS}
+#			@${RM} ${OBJS}
 #			@echo "------->Libft is ready<-------"
 
 all:		${NAME}

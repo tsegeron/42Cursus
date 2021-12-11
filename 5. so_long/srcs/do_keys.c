@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/06 22:34:59 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/06 22:40:03 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/09 11:25:17 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,8 +83,6 @@ int	do_keys(int keycode, t_map *map)
 	draw_map(map);
 	draw_objects(map);
 	game_lost(map);
-	if (map->hero->x == map->exit->x && map->hero->y == map->exit->y
-		&& map->count_coins == 0)
-		game_won(map);
+	game_won(map);
 	return (0);
 }

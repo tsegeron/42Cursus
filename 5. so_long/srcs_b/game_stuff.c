@@ -14,14 +14,25 @@
 
 int	close_win(void)
 {
-	sleep(1);
 	exit(0);
 }
 
 void	game_won(t_map *map)
 {
-	map->close_state = 1;
-	close_win();
+	t_list	*tmp;
+
+	tmp = map->exit;
+	while (map->exit != NULL)
+	{
+		if (map->exit->x == map->hero->x \
+		&& map->exit->y == map->hero->y && map->count_coins == 0)
+		{
+			map->close_state = 1;
+			close_win();
+		}
+		map->exit = map->exit->next;
+	}
+	map->exit = tmp;
 }
 
 void	game_lost(t_map *map)
