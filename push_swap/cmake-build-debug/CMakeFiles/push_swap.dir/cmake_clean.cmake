@@ -1,5 +1,8 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/push_swap.dir/srcs/actions.c.o"
+  "CMakeFiles/push_swap.dir/srcs/actions_1.c.o"
+  "CMakeFiles/push_swap.dir/srcs/actions_2.c.o"
+  "CMakeFiles/push_swap.dir/srcs/actions_3.c.o"
+  "CMakeFiles/push_swap.dir/srcs/algorithm.c.o"
   "CMakeFiles/push_swap.dir/srcs/check_args.c.o"
   "CMakeFiles/push_swap.dir/srcs/ft_atoi.c.o"
   "CMakeFiles/push_swap.dir/srcs/ft_lstadd_back.c.o"
@@ -8,6 +11,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.o"
   "CMakeFiles/push_swap.dir/srcs/ft_lstlast.c.o"
   "CMakeFiles/push_swap.dir/srcs/ft_lstnew.c.o"
+  "CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.o"
   "CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.o"
   "CMakeFiles/push_swap.dir/srcs/merge_sort.c.o"
   "CMakeFiles/push_swap.dir/srcs/test1.c.o"

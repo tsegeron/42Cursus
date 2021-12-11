@@ -78,7 +78,16 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions_1.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions_2.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions_3.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/algorithm.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/check_args.c">
@@ -103,6 +112,9 @@
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstnew.c">
+			<Option target="push_swap"/>
+		</Unit>
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstprelast.c">
 			<Option target="push_swap"/>
 		</Unit>
 		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstsize.c">

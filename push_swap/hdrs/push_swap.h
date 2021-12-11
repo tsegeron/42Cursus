@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/10 19:32:09 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/11 10:44:06 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ typedef struct s_list
 {
 	int				num;
 	int				i;
-//	int				status;
+	int				status;
 //	struct s_list	*prev;
 	struct s_list	*next;
 }	t_list;
@@ -53,6 +53,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstnew(int num, int i);
 t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstprelast(t_list *lst);
 
 void	sa(sts *s, int q);
 void	sb(sts *s, int q);
@@ -66,6 +67,7 @@ void	rra(sts *s, int q);
 void	rrb(sts *s, int q);
 void	rrr(sts *s, int q);
 
+void	do_magic(sts *s);
 
 
 

@@ -6,10 +6,12 @@ static void	fill_stack_a(sts *s, char *av[])
 	int	check_zero;
 
 	i = 0;
+	s->len_a = 0;
 	while (*av)
 	{
 		check_zero = 0;
 		ft_lstadd_back(&s->a, ft_lstnew(ft_atoi(*av++, &check_zero), i++));
+		s->len_a++;
 		if (!s->a->num && !check_zero)
 		{
 			free (s->a); // дописать функцию по очистке всего списка
@@ -39,6 +41,32 @@ static void	fill_stack_sorted(sts *s, int ac)
 		ft_lstadd_back(&s->sorted, ft_lstnew(so[i], i));
 }
 
+static void	put_indexes(sts *s)
+{
+	t_list	*tmp1;
+	t_list	*tmp2;
+
+	tmp1 = s->a;
+	tmp2 = s->sorted;
+	while (s->a)
+	{
+		s->sorted = tmp2;
+		while (s->sorted)
+		{
+			if (s->a->num == s->sorted->num)
+			{
+				s->a->i = s->sorted->i;
+				break;
+			}
+			else
+				s->sorted = s->sorted->next;
+		}
+		s->a = s->a->next;
+	}
+	s->a = tmp1;
+	s->sorted = tmp2;
+}
+
 int	main(int ac, char *av[])
 {
 	sts	s;
@@ -50,35 +78,32 @@ int	main(int ac, char *av[])
 	s.sorted = NULL;
 	fill_stack_a(&s, ++av);
 	fill_stack_sorted(&s, ac);
-	sa(&s, 0);
-	pb(&s, 0);
-//	pb(&s, 0);
-//	printf("%d", a->num);
+	put_indexes(&s);
+	do_magic(&s);
 
 
+				printf("After\n");
+			while (s.a)
+			{
+				printf("%d >> %d\n", s.a->i, s.a->num);
+//				printf("%d ", s.a->num);
+				s.a = s.a->next;
+			}
+//				printf("\n");
 
-
-
-
-
-//	printf("Before\n");
-while (s.a)
-{
-	printf("%d ", s.a->num);
-	s.a = s.a->next;
-}
-	printf("\n");
-while (s.b)
-{
-	printf("%d ", s.b->num);
-	s.b = s.b->next;
-}
-//	printf("\nAfter\n");
-//while (s.sorted)
-//{
-//	printf("%d ", s.sorted->num);
-//	s.sorted = s.sorted->next;
-//}
+//				printf("b \n");
+//			while (s.b)
+//			{
+//				printf("%d ", s.b->num);
+//				s.b = s.b->next;
+//			}
+//
+//				printf("\nAfter\n");
+//			while (s.sorted)
+//			{
+//				printf("%d ", s.sorted->num);
+//				s.sorted = s.sorted->next;
+//			}
 
 	return (0);
 }

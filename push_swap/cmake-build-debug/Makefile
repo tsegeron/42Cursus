@@ -129,29 +129,101 @@ push_swap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
 
-srcs/actions.o: srcs/actions.c.o
-.PHONY : srcs/actions.o
+srcs/actions_1.o: srcs/actions_1.c.o
+.PHONY : srcs/actions_1.o
 
 # target to build an object file
-srcs/actions.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions.c.o
-.PHONY : srcs/actions.c.o
+srcs/actions_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_1.c.o
+.PHONY : srcs/actions_1.c.o
 
-srcs/actions.i: srcs/actions.c.i
-.PHONY : srcs/actions.i
+srcs/actions_1.i: srcs/actions_1.c.i
+.PHONY : srcs/actions_1.i
 
 # target to preprocess a source file
-srcs/actions.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions.c.i
-.PHONY : srcs/actions.c.i
+srcs/actions_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_1.c.i
+.PHONY : srcs/actions_1.c.i
 
-srcs/actions.s: srcs/actions.c.s
-.PHONY : srcs/actions.s
+srcs/actions_1.s: srcs/actions_1.c.s
+.PHONY : srcs/actions_1.s
 
 # target to generate assembly for a file
-srcs/actions.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions.c.s
-.PHONY : srcs/actions.c.s
+srcs/actions_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_1.c.s
+.PHONY : srcs/actions_1.c.s
+
+srcs/actions_2.o: srcs/actions_2.c.o
+.PHONY : srcs/actions_2.o
+
+# target to build an object file
+srcs/actions_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_2.c.o
+.PHONY : srcs/actions_2.c.o
+
+srcs/actions_2.i: srcs/actions_2.c.i
+.PHONY : srcs/actions_2.i
+
+# target to preprocess a source file
+srcs/actions_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_2.c.i
+.PHONY : srcs/actions_2.c.i
+
+srcs/actions_2.s: srcs/actions_2.c.s
+.PHONY : srcs/actions_2.s
+
+# target to generate assembly for a file
+srcs/actions_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_2.c.s
+.PHONY : srcs/actions_2.c.s
+
+srcs/actions_3.o: srcs/actions_3.c.o
+.PHONY : srcs/actions_3.o
+
+# target to build an object file
+srcs/actions_3.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.o
+.PHONY : srcs/actions_3.c.o
+
+srcs/actions_3.i: srcs/actions_3.c.i
+.PHONY : srcs/actions_3.i
+
+# target to preprocess a source file
+srcs/actions_3.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.i
+.PHONY : srcs/actions_3.c.i
+
+srcs/actions_3.s: srcs/actions_3.c.s
+.PHONY : srcs/actions_3.s
+
+# target to generate assembly for a file
+srcs/actions_3.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.s
+.PHONY : srcs/actions_3.c.s
+
+srcs/algorithm.o: srcs/algorithm.c.o
+.PHONY : srcs/algorithm.o
+
+# target to build an object file
+srcs/algorithm.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/algorithm.c.o
+.PHONY : srcs/algorithm.c.o
+
+srcs/algorithm.i: srcs/algorithm.c.i
+.PHONY : srcs/algorithm.i
+
+# target to preprocess a source file
+srcs/algorithm.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/algorithm.c.i
+.PHONY : srcs/algorithm.c.i
+
+srcs/algorithm.s: srcs/algorithm.c.s
+.PHONY : srcs/algorithm.s
+
+# target to generate assembly for a file
+srcs/algorithm.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/algorithm.c.s
+.PHONY : srcs/algorithm.c.s
 
 srcs/check_args.o: srcs/check_args.c.o
 .PHONY : srcs/check_args.o
@@ -345,6 +417,30 @@ srcs/ft_lstnew.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstnew.c.s
 .PHONY : srcs/ft_lstnew.c.s
 
+srcs/ft_lstprelast.o: srcs/ft_lstprelast.c.o
+.PHONY : srcs/ft_lstprelast.o
+
+# target to build an object file
+srcs/ft_lstprelast.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.o
+.PHONY : srcs/ft_lstprelast.c.o
+
+srcs/ft_lstprelast.i: srcs/ft_lstprelast.c.i
+.PHONY : srcs/ft_lstprelast.i
+
+# target to preprocess a source file
+srcs/ft_lstprelast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.i
+.PHONY : srcs/ft_lstprelast.c.i
+
+srcs/ft_lstprelast.s: srcs/ft_lstprelast.c.s
+.PHONY : srcs/ft_lstprelast.s
+
+# target to generate assembly for a file
+srcs/ft_lstprelast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.s
+.PHONY : srcs/ft_lstprelast.c.s
+
 srcs/ft_lstsize.o: srcs/ft_lstsize.c.o
 .PHONY : srcs/ft_lstsize.o
 
@@ -426,9 +522,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... push_swap"
-	@echo "... srcs/actions.o"
-	@echo "... srcs/actions.i"
-	@echo "... srcs/actions.s"
+	@echo "... srcs/actions_1.o"
+	@echo "... srcs/actions_1.i"
+	@echo "... srcs/actions_1.s"
+	@echo "... srcs/actions_2.o"
+	@echo "... srcs/actions_2.i"
+	@echo "... srcs/actions_2.s"
+	@echo "... srcs/actions_3.o"
+	@echo "... srcs/actions_3.i"
+	@echo "... srcs/actions_3.s"
+	@echo "... srcs/algorithm.o"
+	@echo "... srcs/algorithm.i"
+	@echo "... srcs/algorithm.s"
 	@echo "... srcs/check_args.o"
 	@echo "... srcs/check_args.i"
 	@echo "... srcs/check_args.s"
@@ -453,6 +558,9 @@ help:
 	@echo "... srcs/ft_lstnew.o"
 	@echo "... srcs/ft_lstnew.i"
 	@echo "... srcs/ft_lstnew.s"
+	@echo "... srcs/ft_lstprelast.o"
+	@echo "... srcs/ft_lstprelast.i"
+	@echo "... srcs/ft_lstprelast.s"
 	@echo "... srcs/ft_lstsize.o"
 	@echo "... srcs/ft_lstsize.i"
 	@echo "... srcs/ft_lstsize.s"
