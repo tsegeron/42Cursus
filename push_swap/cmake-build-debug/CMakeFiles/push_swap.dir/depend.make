@@ -46,6 +46,9 @@ CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.o: \
 CMakeFiles/push_swap.dir/srcs/merge_sort.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/merge_sort.c
+CMakeFiles/push_swap.dir/srcs/set_statuses.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/set_statuses.c
 CMakeFiles/push_swap.dir/srcs/test1.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/test1.c

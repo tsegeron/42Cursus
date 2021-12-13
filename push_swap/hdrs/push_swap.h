@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/11 10:44:06 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/13 16:15:37 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ typedef struct stucks
 	t_list	*a;
 	t_list	*b;
 	t_list	*sorted;
+	int		count_true;
 //	int
 
 }	sts;
@@ -68,6 +69,7 @@ void	rrb(sts *s, int q);
 void	rrr(sts *s, int q);
 
 void	do_magic(sts *s);
+void	set_statuses(sts *s);
 
 
 

@@ -79,31 +79,43 @@ int	main(int ac, char *av[])
 	fill_stack_a(&s, ++av);
 	fill_stack_sorted(&s, ac);
 	put_indexes(&s);
+//sa(&s,1);
+//ra(&s,1);
+//sa(&s,1);
+//pb(&s,1);
+//pb(&s,1);
+	set_statuses(&s);
+
+
+	printf("%d", s.count_true);
+
+
+
+
 	do_magic(&s);
 
 
-				printf("After\n");
+				printf("\nStuck a\n");
 			while (s.a)
 			{
-				printf("%d >> %d\n", s.a->i, s.a->num);
-//				printf("%d ", s.a->num);
+//				printf("%d-%d >> %d\n", s.a->i, s.a->status, s.a->num);
+				printf("%d ", s.a->num);
 				s.a = s.a->next;
 			}
-//				printf("\n");
 
-//				printf("b \n");
-//			while (s.b)
-//			{
-//				printf("%d ", s.b->num);
-//				s.b = s.b->next;
-//			}
-//
-//				printf("\nAfter\n");
-//			while (s.sorted)
-//			{
-//				printf("%d ", s.sorted->num);
-//				s.sorted = s.sorted->next;
-//			}
+				printf("\n\nStuck b\n");
+			while (s.b)
+			{
+				printf("%d ", s.b->num);
+				s.b = s.b->next;
+			}
+
+				printf("\n\nSorted\n");
+			while (s.sorted)
+			{
+				printf("%d ", s.sorted->num);
+				s.sorted = s.sorted->next;
+			}
 
 	return (0);
 }

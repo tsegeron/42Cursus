@@ -14,6 +14,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.o"
   "CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.o"
   "CMakeFiles/push_swap.dir/srcs/merge_sort.c.o"
+  "CMakeFiles/push_swap.dir/srcs/set_statuses.c.o"
   "CMakeFiles/push_swap.dir/srcs/test1.c.o"
   "push_swap"
   "push_swap.pdb"
