@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/13 16:15:37 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/14 12:22:57 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,11 @@ typedef struct s_list
 {
 	int				num;
 	int				i;
-	int				status;
+	int				count1;
+	int				status1;
+	int				count2;
+//	int				status2;
+	int				sublen;
 //	struct s_list	*prev;
 	struct s_list	*next;
 }	t_list;
@@ -36,7 +40,9 @@ typedef struct stucks
 	t_list	*a;
 	t_list	*b;
 	t_list	*sorted;
-	int		count_true;
+	int		count_true1;
+	int		count_true2;
+	int		count_actions;
 //	int
 
 }	sts;
@@ -69,7 +75,10 @@ void	rrb(sts *s, int q);
 void	rrr(sts *s, int q);
 
 void	do_magic(sts *s);
-void	set_statuses(sts *s);
+//void	set_statuses(sts *s);
+void	set_statuses_in_ascending_index_order(sts *s);
+void	set_statuses_plus_one_index_order(sts *s);
+
 
 
 

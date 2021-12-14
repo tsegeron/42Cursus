@@ -9,7 +9,7 @@ void	do_magic(sts *s)
 	tmp1 = s->a;
 	while (size_a)
 	{
-		if (s->a->status)
+		if (s->a->status1)
 			pb(s, 0);
 		else
 			ra(s, 0);

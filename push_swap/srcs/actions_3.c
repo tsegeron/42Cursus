@@ -28,6 +28,7 @@ void	rra(sts *s, int q)
 		tmp3->next = NULL;
 		if (!q)
 			write(1, "ra\n", 3);
+		s->count_actions++;
 	}
 }
 
@@ -47,6 +48,7 @@ void	rrb(sts *s, int q)
 		tmp3->next = NULL;
 		if (!q)
 			write(1, "ra\n", 3);
+		s->count_actions++;
 	}
 }
 

@@ -26,6 +26,7 @@ void	sa(sts *s, int q)
 		tmp2->next = tmp1;
 		if (!q)
 			write(1, "sa\n", 3);
+		s->count_actions++;
 	}
 }
 
@@ -43,6 +44,7 @@ void	sb(sts *s, int q)
 		tmp2->next = tmp1;
 		if (!q)
 			write(1, "sb\n", 3);
+		s->count_actions++;
 	}
 }
 
@@ -68,6 +70,7 @@ void	pa(sts *s, int q)
 		tmp1->next = tmp2;
 		if (!q)
 			write(1, "pa\n", 3);
+		s->count_actions++;
 	}
 }
 
@@ -85,5 +88,6 @@ void	pb(sts *s, int q)
 		tmp1->next = tmp2;
 		if (!q)
 			write(1, "pb\n", 3);
+		s->count_actions++;
 	}
 }

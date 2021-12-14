@@ -76,30 +76,45 @@ int	main(int ac, char *av[])
 	s.a = NULL;
 	s.b = NULL;
 	s.sorted = NULL;
+	s.count_actions = 0;
 	fill_stack_a(&s, ++av);
 	fill_stack_sorted(&s, ac);
 	put_indexes(&s);
-//sa(&s,1);
-//ra(&s,1);
-//sa(&s,1);
-//pb(&s,1);
-//pb(&s,1);
-	set_statuses(&s);
+
+	set_statuses_in_ascending_index_order(&s);
 
 
-	printf("%d", s.count_true);
+//	printf("%d", s.count_true);
 
 
 
 
-	do_magic(&s);
+//	do_magic(&s);
+//
+//	ra(&s,0);
+//	pb(&s,0);
+//	pb(&s,0);
+//	pb(&s,0);
+//	ra(&s,0);
+//	pa(&s,0);
+//	ra(&s,0);
+//	pa(&s,0);
+//
+//	ra(&s,0);
+//	pa(&s,0);
+//	ra(&s,0);
 
 
-				printf("\nStuck a\n");
+//	printf("actions : %d\n", s.count_actions);
+	printf("shifts  : %d\n", s.count_true1);
+//	printf("shifts  : %d\n", s.count_true2);
+
+	printf("\nStuck a\n");
 			while (s.a)
 			{
-//				printf("%d-%d >> %d\n", s.a->i, s.a->status, s.a->num);
-				printf("%d ", s.a->num);
+				printf("%d-%d >> %d\n", s.a->i, s.a->status1, s.a->num);
+//				printf("%d-%d >> %d\n", s.a->i, s.a->status2, s.a->num);
+//				printf("%d ", s.a->num);
 				s.a = s.a->next;
 			}
 

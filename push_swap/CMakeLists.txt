@@ -25,4 +25,4 @@ add_executable(push_swap
         srcs/ft_lstsize.c
         srcs/merge_sort.c
         srcs/test1.c
-        srcs/set_statuses.c)
+        srcs/set_statuses.c srcs/set_statuses_2.c srcs/set_statuses_1.c srcs/set_statuses_orig.c)

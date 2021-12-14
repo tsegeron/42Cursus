@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/push_swap
+CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gernesto/Desktop/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/push_swap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -513,6 +513,78 @@ srcs/set_statuses.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses.c.s
 .PHONY : srcs/set_statuses.c.s
 
+srcs/set_statuses_1.o: srcs/set_statuses_1.c.o
+.PHONY : srcs/set_statuses_1.o
+
+# target to build an object file
+srcs/set_statuses_1.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_1.c.o
+.PHONY : srcs/set_statuses_1.c.o
+
+srcs/set_statuses_1.i: srcs/set_statuses_1.c.i
+.PHONY : srcs/set_statuses_1.i
+
+# target to preprocess a source file
+srcs/set_statuses_1.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_1.c.i
+.PHONY : srcs/set_statuses_1.c.i
+
+srcs/set_statuses_1.s: srcs/set_statuses_1.c.s
+.PHONY : srcs/set_statuses_1.s
+
+# target to generate assembly for a file
+srcs/set_statuses_1.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_1.c.s
+.PHONY : srcs/set_statuses_1.c.s
+
+srcs/set_statuses_2.o: srcs/set_statuses_2.c.o
+.PHONY : srcs/set_statuses_2.o
+
+# target to build an object file
+srcs/set_statuses_2.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_2.c.o
+.PHONY : srcs/set_statuses_2.c.o
+
+srcs/set_statuses_2.i: srcs/set_statuses_2.c.i
+.PHONY : srcs/set_statuses_2.i
+
+# target to preprocess a source file
+srcs/set_statuses_2.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_2.c.i
+.PHONY : srcs/set_statuses_2.c.i
+
+srcs/set_statuses_2.s: srcs/set_statuses_2.c.s
+.PHONY : srcs/set_statuses_2.s
+
+# target to generate assembly for a file
+srcs/set_statuses_2.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_2.c.s
+.PHONY : srcs/set_statuses_2.c.s
+
+srcs/set_statuses_orig.o: srcs/set_statuses_orig.c.o
+.PHONY : srcs/set_statuses_orig.o
+
+# target to build an object file
+srcs/set_statuses_orig.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_orig.c.o
+.PHONY : srcs/set_statuses_orig.c.o
+
+srcs/set_statuses_orig.i: srcs/set_statuses_orig.c.i
+.PHONY : srcs/set_statuses_orig.i
+
+# target to preprocess a source file
+srcs/set_statuses_orig.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_orig.c.i
+.PHONY : srcs/set_statuses_orig.c.i
+
+srcs/set_statuses_orig.s: srcs/set_statuses_orig.c.s
+.PHONY : srcs/set_statuses_orig.s
+
+# target to generate assembly for a file
+srcs/set_statuses_orig.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_orig.c.s
+.PHONY : srcs/set_statuses_orig.c.s
+
 srcs/test1.o: srcs/test1.c.o
 .PHONY : srcs/test1.o
 
@@ -594,6 +666,15 @@ help:
 	@echo "... srcs/set_statuses.o"
 	@echo "... srcs/set_statuses.i"
 	@echo "... srcs/set_statuses.s"
+	@echo "... srcs/set_statuses_1.o"
+	@echo "... srcs/set_statuses_1.i"
+	@echo "... srcs/set_statuses_1.s"
+	@echo "... srcs/set_statuses_2.o"
+	@echo "... srcs/set_statuses_2.i"
+	@echo "... srcs/set_statuses_2.s"
+	@echo "... srcs/set_statuses_orig.o"
+	@echo "... srcs/set_statuses_orig.i"
+	@echo "... srcs/set_statuses_orig.s"
 	@echo "... srcs/test1.o"
 	@echo "... srcs/test1.i"
 	@echo "... srcs/test1.s"
