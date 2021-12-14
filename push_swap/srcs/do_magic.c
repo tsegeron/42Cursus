@@ -2,26 +2,21 @@
 
 void	do_magic(sts *s)
 {
-	int		size_a;
-	t_list	*tmp1;
+	int size_a;
+	t_list *tmp1;
 
 	size_a = ft_lstsize(s->a);
 	tmp1 = s->a;
+
 	while (size_a)
 	{
-		if (s->a->status1)
+		if (s->a->gt_status)
 			pb(s, 0);
 		else
 			ra(s, 0);
 		size_a--;
 	}
-
-
-
-	s->a = tmp1;
-
-
-
+}
 
 
 
@@ -70,7 +65,7 @@ void	do_magic(sts *s)
 //	rra(s, 1);
 //	rrb(s, 1);
 
-}
+//}
 /*
  * 1. найти наименьшее число
  * 2. обозначить статус переноса для последующих

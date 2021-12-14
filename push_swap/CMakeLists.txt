@@ -12,7 +12,7 @@ add_executable(push_swap
         srcs/actions_1.c
         srcs/actions_2.c
         srcs/actions_3.c
-        srcs/algorithm.c
+        srcs/do_magic.c
         srcs/check_args.c
         srcs/ft_atoi.c
         srcs/ft_lstadd_back.c
@@ -25,4 +25,9 @@ add_executable(push_swap
         srcs/ft_lstsize.c
         srcs/merge_sort.c
         srcs/test1.c
-        srcs/set_statuses.c srcs/set_statuses_2.c srcs/set_statuses_1.c srcs/set_statuses_orig.c)
+        srcs/set_statuses.c
+        srcs/set_statuses_2.c
+        srcs/set_statuses_1.c
+        srcs/gt_find_start.c
+        srcs/rename_me.c
+        )

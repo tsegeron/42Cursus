@@ -10,12 +10,12 @@ CMakeFiles/push_swap.dir/srcs/actions_2.c.o: \
 CMakeFiles/push_swap.dir/srcs/actions_3.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/actions_3.c
-CMakeFiles/push_swap.dir/srcs/algorithm.c.o: \
- ../hdrs/push_swap.h \
- ../srcs/algorithm.c
 CMakeFiles/push_swap.dir/srcs/check_args.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/check_args.c
+CMakeFiles/push_swap.dir/srcs/do_magic.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/do_magic.c
 CMakeFiles/push_swap.dir/srcs/ft_atoi.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/ft_atoi.c
@@ -43,9 +43,15 @@ CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.o: \
 CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/ft_lstsize.c
+CMakeFiles/push_swap.dir/srcs/gt_find_start.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/gt_find_start.c
 CMakeFiles/push_swap.dir/srcs/merge_sort.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/merge_sort.c
+CMakeFiles/push_swap.dir/srcs/rename_me.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/rename_me.c
 CMakeFiles/push_swap.dir/srcs/set_statuses.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/set_statuses.c

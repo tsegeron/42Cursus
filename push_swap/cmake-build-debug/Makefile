@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/push_swap
+CMAKE_SOURCE_DIR = /Users/tsegeron/Coding/42/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/tsegeron/Coding/42/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tsegeron/Coding/42/push_swap/cmake-build-debug/CMakeFiles /Users/tsegeron/Coding/42/push_swap/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tsegeron/Coding/42/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -201,30 +201,6 @@ srcs/actions_3.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.s
 .PHONY : srcs/actions_3.c.s
 
-srcs/algorithm.o: srcs/algorithm.c.o
-.PHONY : srcs/algorithm.o
-
-# target to build an object file
-srcs/algorithm.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/algorithm.c.o
-.PHONY : srcs/algorithm.c.o
-
-srcs/algorithm.i: srcs/algorithm.c.i
-.PHONY : srcs/algorithm.i
-
-# target to preprocess a source file
-srcs/algorithm.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/algorithm.c.i
-.PHONY : srcs/algorithm.c.i
-
-srcs/algorithm.s: srcs/algorithm.c.s
-.PHONY : srcs/algorithm.s
-
-# target to generate assembly for a file
-srcs/algorithm.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/algorithm.c.s
-.PHONY : srcs/algorithm.c.s
-
 srcs/check_args.o: srcs/check_args.c.o
 .PHONY : srcs/check_args.o
 
@@ -248,6 +224,30 @@ srcs/check_args.s: srcs/check_args.c.s
 srcs/check_args.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/check_args.c.s
 .PHONY : srcs/check_args.c.s
+
+srcs/do_magic.o: srcs/do_magic.c.o
+.PHONY : srcs/do_magic.o
+
+# target to build an object file
+srcs/do_magic.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/do_magic.c.o
+.PHONY : srcs/do_magic.c.o
+
+srcs/do_magic.i: srcs/do_magic.c.i
+.PHONY : srcs/do_magic.i
+
+# target to preprocess a source file
+srcs/do_magic.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/do_magic.c.i
+.PHONY : srcs/do_magic.c.i
+
+srcs/do_magic.s: srcs/do_magic.c.s
+.PHONY : srcs/do_magic.s
+
+# target to generate assembly for a file
+srcs/do_magic.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/do_magic.c.s
+.PHONY : srcs/do_magic.c.s
 
 srcs/ft_atoi.o: srcs/ft_atoi.c.o
 .PHONY : srcs/ft_atoi.o
@@ -465,6 +465,30 @@ srcs/ft_lstsize.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.s
 .PHONY : srcs/ft_lstsize.c.s
 
+srcs/gt_find_start.o: srcs/gt_find_start.c.o
+.PHONY : srcs/gt_find_start.o
+
+# target to build an object file
+srcs/gt_find_start.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/gt_find_start.c.o
+.PHONY : srcs/gt_find_start.c.o
+
+srcs/gt_find_start.i: srcs/gt_find_start.c.i
+.PHONY : srcs/gt_find_start.i
+
+# target to preprocess a source file
+srcs/gt_find_start.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/gt_find_start.c.i
+.PHONY : srcs/gt_find_start.c.i
+
+srcs/gt_find_start.s: srcs/gt_find_start.c.s
+.PHONY : srcs/gt_find_start.s
+
+# target to generate assembly for a file
+srcs/gt_find_start.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/gt_find_start.c.s
+.PHONY : srcs/gt_find_start.c.s
+
 srcs/merge_sort.o: srcs/merge_sort.c.o
 .PHONY : srcs/merge_sort.o
 
@@ -488,6 +512,30 @@ srcs/merge_sort.s: srcs/merge_sort.c.s
 srcs/merge_sort.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/merge_sort.c.s
 .PHONY : srcs/merge_sort.c.s
+
+srcs/rename_me.o: srcs/rename_me.c.o
+.PHONY : srcs/rename_me.o
+
+# target to build an object file
+srcs/rename_me.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/rename_me.c.o
+.PHONY : srcs/rename_me.c.o
+
+srcs/rename_me.i: srcs/rename_me.c.i
+.PHONY : srcs/rename_me.i
+
+# target to preprocess a source file
+srcs/rename_me.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/rename_me.c.i
+.PHONY : srcs/rename_me.c.i
+
+srcs/rename_me.s: srcs/rename_me.c.s
+.PHONY : srcs/rename_me.s
+
+# target to generate assembly for a file
+srcs/rename_me.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/rename_me.c.s
+.PHONY : srcs/rename_me.c.s
 
 srcs/set_statuses.o: srcs/set_statuses.c.o
 .PHONY : srcs/set_statuses.o
@@ -561,30 +609,6 @@ srcs/set_statuses_2.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_2.c.s
 .PHONY : srcs/set_statuses_2.c.s
 
-srcs/set_statuses_orig.o: srcs/set_statuses_orig.c.o
-.PHONY : srcs/set_statuses_orig.o
-
-# target to build an object file
-srcs/set_statuses_orig.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_orig.c.o
-.PHONY : srcs/set_statuses_orig.c.o
-
-srcs/set_statuses_orig.i: srcs/set_statuses_orig.c.i
-.PHONY : srcs/set_statuses_orig.i
-
-# target to preprocess a source file
-srcs/set_statuses_orig.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_orig.c.i
-.PHONY : srcs/set_statuses_orig.c.i
-
-srcs/set_statuses_orig.s: srcs/set_statuses_orig.c.s
-.PHONY : srcs/set_statuses_orig.s
-
-# target to generate assembly for a file
-srcs/set_statuses_orig.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_orig.c.s
-.PHONY : srcs/set_statuses_orig.c.s
-
 srcs/test1.o: srcs/test1.c.o
 .PHONY : srcs/test1.o
 
@@ -627,12 +651,12 @@ help:
 	@echo "... srcs/actions_3.o"
 	@echo "... srcs/actions_3.i"
 	@echo "... srcs/actions_3.s"
-	@echo "... srcs/algorithm.o"
-	@echo "... srcs/algorithm.i"
-	@echo "... srcs/algorithm.s"
 	@echo "... srcs/check_args.o"
 	@echo "... srcs/check_args.i"
 	@echo "... srcs/check_args.s"
+	@echo "... srcs/do_magic.o"
+	@echo "... srcs/do_magic.i"
+	@echo "... srcs/do_magic.s"
 	@echo "... srcs/ft_atoi.o"
 	@echo "... srcs/ft_atoi.i"
 	@echo "... srcs/ft_atoi.s"
@@ -660,9 +684,15 @@ help:
 	@echo "... srcs/ft_lstsize.o"
 	@echo "... srcs/ft_lstsize.i"
 	@echo "... srcs/ft_lstsize.s"
+	@echo "... srcs/gt_find_start.o"
+	@echo "... srcs/gt_find_start.i"
+	@echo "... srcs/gt_find_start.s"
 	@echo "... srcs/merge_sort.o"
 	@echo "... srcs/merge_sort.i"
 	@echo "... srcs/merge_sort.s"
+	@echo "... srcs/rename_me.o"
+	@echo "... srcs/rename_me.i"
+	@echo "... srcs/rename_me.s"
 	@echo "... srcs/set_statuses.o"
 	@echo "... srcs/set_statuses.i"
 	@echo "... srcs/set_statuses.s"
@@ -672,9 +702,6 @@ help:
 	@echo "... srcs/set_statuses_2.o"
 	@echo "... srcs/set_statuses_2.i"
 	@echo "... srcs/set_statuses_2.s"
-	@echo "... srcs/set_statuses_orig.o"
-	@echo "... srcs/set_statuses_orig.i"
-	@echo "... srcs/set_statuses_orig.s"
 	@echo "... srcs/test1.o"
 	@echo "... srcs/test1.i"
 	@echo "... srcs/test1.s"
