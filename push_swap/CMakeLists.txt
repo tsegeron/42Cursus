@@ -23,4 +23,4 @@ add_executable(push_swap
         srcs/do_magic.c
         srcs/do_stuff.c
         srcs/fill_stacks.c
-        )
+        srcs/count_needed_actions.c)

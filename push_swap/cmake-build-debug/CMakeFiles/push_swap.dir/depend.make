@@ -16,6 +16,9 @@ CMakeFiles/push_swap.dir/srcs/3.actions.c.o: \
 CMakeFiles/push_swap.dir/srcs/check_args.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/check_args.c
+CMakeFiles/push_swap.dir/srcs/count_needed_actions.c.o: \
+ ../hdrs/push_swap.h \
+ ../srcs/count_needed_actions.c
 CMakeFiles/push_swap.dir/srcs/do_magic.c.o: \
  ../hdrs/push_swap.h \
  ../srcs/do_magic.c

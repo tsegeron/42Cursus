@@ -4,6 +4,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/push_swap.dir/srcs/2.actions.c.o"
   "CMakeFiles/push_swap.dir/srcs/3.actions.c.o"
   "CMakeFiles/push_swap.dir/srcs/check_args.c.o"
+  "CMakeFiles/push_swap.dir/srcs/count_needed_actions.c.o"
   "CMakeFiles/push_swap.dir/srcs/do_magic.c.o"
   "CMakeFiles/push_swap.dir/srcs/do_stuff.c.o"
   "CMakeFiles/push_swap.dir/srcs/fill_stacks.c.o"

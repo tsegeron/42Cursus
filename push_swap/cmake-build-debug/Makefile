@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/tsegeron/Coding/42/push_swap
+CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/tsegeron/Coding/42/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tsegeron/Coding/42/push_swap/cmake-build-debug/CMakeFiles /Users/tsegeron/Coding/42/push_swap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tsegeron/Coding/42/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -248,6 +248,30 @@ srcs/check_args.s: srcs/check_args.c.s
 srcs/check_args.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/check_args.c.s
 .PHONY : srcs/check_args.c.s
+
+srcs/count_needed_actions.o: srcs/count_needed_actions.c.o
+.PHONY : srcs/count_needed_actions.o
+
+# target to build an object file
+srcs/count_needed_actions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/count_needed_actions.c.o
+.PHONY : srcs/count_needed_actions.c.o
+
+srcs/count_needed_actions.i: srcs/count_needed_actions.c.i
+.PHONY : srcs/count_needed_actions.i
+
+# target to preprocess a source file
+srcs/count_needed_actions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/count_needed_actions.c.i
+.PHONY : srcs/count_needed_actions.c.i
+
+srcs/count_needed_actions.s: srcs/count_needed_actions.c.s
+.PHONY : srcs/count_needed_actions.s
+
+# target to generate assembly for a file
+srcs/count_needed_actions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/count_needed_actions.c.s
+.PHONY : srcs/count_needed_actions.c.s
 
 srcs/do_magic.o: srcs/do_magic.c.o
 .PHONY : srcs/do_magic.o
@@ -585,6 +609,9 @@ help:
 	@echo "... srcs/check_args.o"
 	@echo "... srcs/check_args.i"
 	@echo "... srcs/check_args.s"
+	@echo "... srcs/count_needed_actions.o"
+	@echo "... srcs/count_needed_actions.i"
+	@echo "... srcs/count_needed_actions.s"
 	@echo "... srcs/do_magic.o"
 	@echo "... srcs/do_magic.i"
 	@echo "... srcs/do_magic.s"
