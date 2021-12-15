@@ -6,3 +6,15 @@
 
 #IncludeRegexTransform: 
 
+/Users/tsegeron/Coding/42/push_swap/hdrs/push_swap.h
+stdlib.h
+-
+unistd.h
+-
+stdio.h
+-
+
+/Users/tsegeron/Coding/42/push_swap/srcs/test1.c
+../hdrs/push_swap.h
+/Users/tsegeron/Coding/42/push_swap/hdrs/push_swap.h
+

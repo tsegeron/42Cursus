@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/15 10:51:15 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/15 13:29:36 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,9 +52,9 @@ typedef struct stucks
 
 
 int		check_args(int **a,int **b, int ac, char *av[]);
-int		ft_atoi(const char *str, int *check_zero);
 void	merge_sort(int a[], size_t start, size_t end);
 
+int		ft_atoi(const char *str, int *check_zero);
 int		ft_lstsize(t_list *lst);
 void	ft_lstdelone(t_list *lst);
 void	ft_lstclear(t_list **lst);
@@ -63,6 +63,11 @@ void	ft_lstadd_front(t_list **lst, t_list *new);
 t_list	*ft_lstnew(int num, int i);
 t_list	*ft_lstlast(t_list *lst);
 t_list	*ft_lstprelast(t_list *lst);
+
+void	fill_stack_a(sts *s, char *av[]);
+void	fill_stack_sorted(sts *s, int ac);
+void	put_indexes(sts *s);
+
 
 void	sa(sts *s, int q);
 void	sb(sts *s, int q);
@@ -82,7 +87,7 @@ void	do_magic(sts *s);
 //void	set_statuses_plus_one_index_order(sts *s);
 t_list *gt_find_start(sts *s);
 void	do_stuff(sts *s);
-void	gt_set_statuses(sts *s, t_list *start);
+void	gt_set_statuses(sts *s);
 
 
 

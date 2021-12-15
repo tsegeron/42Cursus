@@ -1,33 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 14:11:55 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/10 19:50:30 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/10 22:20:04 by gernesto          #+#    #+#             */
+/*   Updated: 2021/12/10 19:56:14 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../hdrs/push_swap.h"
+#include "../../hdrs/push_swap.h"
 
-void	ft_lstclear(t_list **lst)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	t_list	*tmp;
-	t_list	*prev_ptr;
 
-	if (!lst)
-		return ;
 	tmp = *lst;
-	while (tmp != NULL)
+	if (!new)
+		return ;
+	if (!*lst)
 	{
-		prev_ptr = tmp->next;
-//		del(tmp->list_position);
-//		del(tmp->x);
-//		del(tmp->y);
-		free(tmp);
-		tmp = prev_ptr;
+		*lst = new;
+		return ;
 	}
-	*lst = NULL;
+	new->next = *lst;
+	*lst = new;
+
 }

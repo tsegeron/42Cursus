@@ -14,7 +14,7 @@ void	do_magic(sts *s)
 		if (s->a->next && s->a->i > s->a->next->i)
 		{
 			sa(s, 0);
-			gt_set_statuses(s, gt_find_start(s));
+			gt_set_statuses(s);
 		}
 		else if (s->a->gt_status)
 			pb(s, 0);
@@ -24,10 +24,10 @@ void	do_magic(sts *s)
 	}
 
 // algorithm to move from A to B
-	while (s->b)
-	{
-
-	}
+//	while (s->b)
+//	{
+//
+//	}
 
 
 

@@ -57,10 +57,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/gernesto/Desktop/MyGit/push_swap
+CMAKE_SOURCE_DIR = /Users/tsegeron/Coding/42/push_swap
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/tsegeron/Coding/42/push_swap/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tsegeron/Coding/42/push_swap/cmake-build-debug/CMakeFiles /Users/tsegeron/Coding/42/push_swap/cmake-build-debug//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/tsegeron/Coding/42/push_swap/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -129,77 +129,101 @@ push_swap/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/build
 .PHONY : push_swap/fast
 
-srcs/actions_1.o: srcs/actions_1.c.o
-.PHONY : srcs/actions_1.o
+srcs/0.merge_sort.o: srcs/0.merge_sort.c.o
+.PHONY : srcs/0.merge_sort.o
 
 # target to build an object file
-srcs/actions_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_1.c.o
-.PHONY : srcs/actions_1.c.o
+srcs/0.merge_sort.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/0.merge_sort.c.o
+.PHONY : srcs/0.merge_sort.c.o
 
-srcs/actions_1.i: srcs/actions_1.c.i
-.PHONY : srcs/actions_1.i
+srcs/0.merge_sort.i: srcs/0.merge_sort.c.i
+.PHONY : srcs/0.merge_sort.i
 
 # target to preprocess a source file
-srcs/actions_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_1.c.i
-.PHONY : srcs/actions_1.c.i
+srcs/0.merge_sort.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/0.merge_sort.c.i
+.PHONY : srcs/0.merge_sort.c.i
 
-srcs/actions_1.s: srcs/actions_1.c.s
-.PHONY : srcs/actions_1.s
+srcs/0.merge_sort.s: srcs/0.merge_sort.c.s
+.PHONY : srcs/0.merge_sort.s
 
 # target to generate assembly for a file
-srcs/actions_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_1.c.s
-.PHONY : srcs/actions_1.c.s
+srcs/0.merge_sort.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/0.merge_sort.c.s
+.PHONY : srcs/0.merge_sort.c.s
 
-srcs/actions_2.o: srcs/actions_2.c.o
-.PHONY : srcs/actions_2.o
+srcs/1.actions.o: srcs/1.actions.c.o
+.PHONY : srcs/1.actions.o
 
 # target to build an object file
-srcs/actions_2.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_2.c.o
-.PHONY : srcs/actions_2.c.o
+srcs/1.actions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/1.actions.c.o
+.PHONY : srcs/1.actions.c.o
 
-srcs/actions_2.i: srcs/actions_2.c.i
-.PHONY : srcs/actions_2.i
+srcs/1.actions.i: srcs/1.actions.c.i
+.PHONY : srcs/1.actions.i
 
 # target to preprocess a source file
-srcs/actions_2.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_2.c.i
-.PHONY : srcs/actions_2.c.i
+srcs/1.actions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/1.actions.c.i
+.PHONY : srcs/1.actions.c.i
 
-srcs/actions_2.s: srcs/actions_2.c.s
-.PHONY : srcs/actions_2.s
+srcs/1.actions.s: srcs/1.actions.c.s
+.PHONY : srcs/1.actions.s
 
 # target to generate assembly for a file
-srcs/actions_2.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_2.c.s
-.PHONY : srcs/actions_2.c.s
+srcs/1.actions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/1.actions.c.s
+.PHONY : srcs/1.actions.c.s
 
-srcs/actions_3.o: srcs/actions_3.c.o
-.PHONY : srcs/actions_3.o
+srcs/2.actions.o: srcs/2.actions.c.o
+.PHONY : srcs/2.actions.o
 
 # target to build an object file
-srcs/actions_3.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.o
-.PHONY : srcs/actions_3.c.o
+srcs/2.actions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/2.actions.c.o
+.PHONY : srcs/2.actions.c.o
 
-srcs/actions_3.i: srcs/actions_3.c.i
-.PHONY : srcs/actions_3.i
+srcs/2.actions.i: srcs/2.actions.c.i
+.PHONY : srcs/2.actions.i
 
 # target to preprocess a source file
-srcs/actions_3.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.i
-.PHONY : srcs/actions_3.c.i
+srcs/2.actions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/2.actions.c.i
+.PHONY : srcs/2.actions.c.i
 
-srcs/actions_3.s: srcs/actions_3.c.s
-.PHONY : srcs/actions_3.s
+srcs/2.actions.s: srcs/2.actions.c.s
+.PHONY : srcs/2.actions.s
 
 # target to generate assembly for a file
-srcs/actions_3.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/actions_3.c.s
-.PHONY : srcs/actions_3.c.s
+srcs/2.actions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/2.actions.c.s
+.PHONY : srcs/2.actions.c.s
+
+srcs/3.actions.o: srcs/3.actions.c.o
+.PHONY : srcs/3.actions.o
+
+# target to build an object file
+srcs/3.actions.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/3.actions.c.o
+.PHONY : srcs/3.actions.c.o
+
+srcs/3.actions.i: srcs/3.actions.c.i
+.PHONY : srcs/3.actions.i
+
+# target to preprocess a source file
+srcs/3.actions.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/3.actions.c.i
+.PHONY : srcs/3.actions.c.i
+
+srcs/3.actions.s: srcs/3.actions.c.s
+.PHONY : srcs/3.actions.s
+
+# target to generate assembly for a file
+srcs/3.actions.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/3.actions.c.s
+.PHONY : srcs/3.actions.c.s
 
 srcs/check_args.o: srcs/check_args.c.o
 .PHONY : srcs/check_args.o
@@ -273,317 +297,245 @@ srcs/do_stuff.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/do_stuff.c.s
 .PHONY : srcs/do_stuff.c.s
 
-srcs/ft_atoi.o: srcs/ft_atoi.c.o
-.PHONY : srcs/ft_atoi.o
+srcs/fill_stacks.o: srcs/fill_stacks.c.o
+.PHONY : srcs/fill_stacks.o
 
 # target to build an object file
-srcs/ft_atoi.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_atoi.c.o
-.PHONY : srcs/ft_atoi.c.o
+srcs/fill_stacks.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/fill_stacks.c.o
+.PHONY : srcs/fill_stacks.c.o
 
-srcs/ft_atoi.i: srcs/ft_atoi.c.i
-.PHONY : srcs/ft_atoi.i
+srcs/fill_stacks.i: srcs/fill_stacks.c.i
+.PHONY : srcs/fill_stacks.i
 
 # target to preprocess a source file
-srcs/ft_atoi.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_atoi.c.i
-.PHONY : srcs/ft_atoi.c.i
+srcs/fill_stacks.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/fill_stacks.c.i
+.PHONY : srcs/fill_stacks.c.i
 
-srcs/ft_atoi.s: srcs/ft_atoi.c.s
-.PHONY : srcs/ft_atoi.s
+srcs/fill_stacks.s: srcs/fill_stacks.c.s
+.PHONY : srcs/fill_stacks.s
 
 # target to generate assembly for a file
-srcs/ft_atoi.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_atoi.c.s
-.PHONY : srcs/ft_atoi.c.s
+srcs/fill_stacks.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/fill_stacks.c.s
+.PHONY : srcs/fill_stacks.c.s
 
-srcs/ft_lstadd_back.o: srcs/ft_lstadd_back.c.o
-.PHONY : srcs/ft_lstadd_back.o
+srcs/libfts/ft_atoi.o: srcs/libfts/ft_atoi.c.o
+.PHONY : srcs/libfts/ft_atoi.o
 
 # target to build an object file
-srcs/ft_lstadd_back.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_back.c.o
-.PHONY : srcs/ft_lstadd_back.c.o
+srcs/libfts/ft_atoi.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_atoi.c.o
+.PHONY : srcs/libfts/ft_atoi.c.o
 
-srcs/ft_lstadd_back.i: srcs/ft_lstadd_back.c.i
-.PHONY : srcs/ft_lstadd_back.i
+srcs/libfts/ft_atoi.i: srcs/libfts/ft_atoi.c.i
+.PHONY : srcs/libfts/ft_atoi.i
 
 # target to preprocess a source file
-srcs/ft_lstadd_back.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_back.c.i
-.PHONY : srcs/ft_lstadd_back.c.i
+srcs/libfts/ft_atoi.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_atoi.c.i
+.PHONY : srcs/libfts/ft_atoi.c.i
 
-srcs/ft_lstadd_back.s: srcs/ft_lstadd_back.c.s
-.PHONY : srcs/ft_lstadd_back.s
+srcs/libfts/ft_atoi.s: srcs/libfts/ft_atoi.c.s
+.PHONY : srcs/libfts/ft_atoi.s
 
 # target to generate assembly for a file
-srcs/ft_lstadd_back.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_back.c.s
-.PHONY : srcs/ft_lstadd_back.c.s
+srcs/libfts/ft_atoi.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_atoi.c.s
+.PHONY : srcs/libfts/ft_atoi.c.s
 
-srcs/ft_lstadd_front.o: srcs/ft_lstadd_front.c.o
-.PHONY : srcs/ft_lstadd_front.o
+srcs/libfts/ft_lstadd_back.o: srcs/libfts/ft_lstadd_back.c.o
+.PHONY : srcs/libfts/ft_lstadd_back.o
 
 # target to build an object file
-srcs/ft_lstadd_front.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.o
-.PHONY : srcs/ft_lstadd_front.c.o
+srcs/libfts/ft_lstadd_back.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstadd_back.c.o
+.PHONY : srcs/libfts/ft_lstadd_back.c.o
 
-srcs/ft_lstadd_front.i: srcs/ft_lstadd_front.c.i
-.PHONY : srcs/ft_lstadd_front.i
+srcs/libfts/ft_lstadd_back.i: srcs/libfts/ft_lstadd_back.c.i
+.PHONY : srcs/libfts/ft_lstadd_back.i
 
 # target to preprocess a source file
-srcs/ft_lstadd_front.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.i
-.PHONY : srcs/ft_lstadd_front.c.i
+srcs/libfts/ft_lstadd_back.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstadd_back.c.i
+.PHONY : srcs/libfts/ft_lstadd_back.c.i
 
-srcs/ft_lstadd_front.s: srcs/ft_lstadd_front.c.s
-.PHONY : srcs/ft_lstadd_front.s
+srcs/libfts/ft_lstadd_back.s: srcs/libfts/ft_lstadd_back.c.s
+.PHONY : srcs/libfts/ft_lstadd_back.s
 
 # target to generate assembly for a file
-srcs/ft_lstadd_front.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstadd_front.c.s
-.PHONY : srcs/ft_lstadd_front.c.s
+srcs/libfts/ft_lstadd_back.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstadd_back.c.s
+.PHONY : srcs/libfts/ft_lstadd_back.c.s
 
-srcs/ft_lstclear.o: srcs/ft_lstclear.c.o
-.PHONY : srcs/ft_lstclear.o
+srcs/libfts/ft_lstadd_front.o: srcs/libfts/ft_lstadd_front.c.o
+.PHONY : srcs/libfts/ft_lstadd_front.o
 
 # target to build an object file
-srcs/ft_lstclear.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.o
-.PHONY : srcs/ft_lstclear.c.o
+srcs/libfts/ft_lstadd_front.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstadd_front.c.o
+.PHONY : srcs/libfts/ft_lstadd_front.c.o
 
-srcs/ft_lstclear.i: srcs/ft_lstclear.c.i
-.PHONY : srcs/ft_lstclear.i
+srcs/libfts/ft_lstadd_front.i: srcs/libfts/ft_lstadd_front.c.i
+.PHONY : srcs/libfts/ft_lstadd_front.i
 
 # target to preprocess a source file
-srcs/ft_lstclear.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.i
-.PHONY : srcs/ft_lstclear.c.i
+srcs/libfts/ft_lstadd_front.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstadd_front.c.i
+.PHONY : srcs/libfts/ft_lstadd_front.c.i
 
-srcs/ft_lstclear.s: srcs/ft_lstclear.c.s
-.PHONY : srcs/ft_lstclear.s
+srcs/libfts/ft_lstadd_front.s: srcs/libfts/ft_lstadd_front.c.s
+.PHONY : srcs/libfts/ft_lstadd_front.s
 
 # target to generate assembly for a file
-srcs/ft_lstclear.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstclear.c.s
-.PHONY : srcs/ft_lstclear.c.s
+srcs/libfts/ft_lstadd_front.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstadd_front.c.s
+.PHONY : srcs/libfts/ft_lstadd_front.c.s
 
-srcs/ft_lstdelone.o: srcs/ft_lstdelone.c.o
-.PHONY : srcs/ft_lstdelone.o
+srcs/libfts/ft_lstclear.o: srcs/libfts/ft_lstclear.c.o
+.PHONY : srcs/libfts/ft_lstclear.o
 
 # target to build an object file
-srcs/ft_lstdelone.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.o
-.PHONY : srcs/ft_lstdelone.c.o
+srcs/libfts/ft_lstclear.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstclear.c.o
+.PHONY : srcs/libfts/ft_lstclear.c.o
 
-srcs/ft_lstdelone.i: srcs/ft_lstdelone.c.i
-.PHONY : srcs/ft_lstdelone.i
+srcs/libfts/ft_lstclear.i: srcs/libfts/ft_lstclear.c.i
+.PHONY : srcs/libfts/ft_lstclear.i
 
 # target to preprocess a source file
-srcs/ft_lstdelone.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.i
-.PHONY : srcs/ft_lstdelone.c.i
+srcs/libfts/ft_lstclear.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstclear.c.i
+.PHONY : srcs/libfts/ft_lstclear.c.i
 
-srcs/ft_lstdelone.s: srcs/ft_lstdelone.c.s
-.PHONY : srcs/ft_lstdelone.s
+srcs/libfts/ft_lstclear.s: srcs/libfts/ft_lstclear.c.s
+.PHONY : srcs/libfts/ft_lstclear.s
 
 # target to generate assembly for a file
-srcs/ft_lstdelone.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstdelone.c.s
-.PHONY : srcs/ft_lstdelone.c.s
+srcs/libfts/ft_lstclear.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstclear.c.s
+.PHONY : srcs/libfts/ft_lstclear.c.s
 
-srcs/ft_lstlast.o: srcs/ft_lstlast.c.o
-.PHONY : srcs/ft_lstlast.o
+srcs/libfts/ft_lstdelone.o: srcs/libfts/ft_lstdelone.c.o
+.PHONY : srcs/libfts/ft_lstdelone.o
 
 # target to build an object file
-srcs/ft_lstlast.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstlast.c.o
-.PHONY : srcs/ft_lstlast.c.o
+srcs/libfts/ft_lstdelone.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstdelone.c.o
+.PHONY : srcs/libfts/ft_lstdelone.c.o
 
-srcs/ft_lstlast.i: srcs/ft_lstlast.c.i
-.PHONY : srcs/ft_lstlast.i
+srcs/libfts/ft_lstdelone.i: srcs/libfts/ft_lstdelone.c.i
+.PHONY : srcs/libfts/ft_lstdelone.i
 
 # target to preprocess a source file
-srcs/ft_lstlast.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstlast.c.i
-.PHONY : srcs/ft_lstlast.c.i
+srcs/libfts/ft_lstdelone.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstdelone.c.i
+.PHONY : srcs/libfts/ft_lstdelone.c.i
 
-srcs/ft_lstlast.s: srcs/ft_lstlast.c.s
-.PHONY : srcs/ft_lstlast.s
+srcs/libfts/ft_lstdelone.s: srcs/libfts/ft_lstdelone.c.s
+.PHONY : srcs/libfts/ft_lstdelone.s
 
 # target to generate assembly for a file
-srcs/ft_lstlast.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstlast.c.s
-.PHONY : srcs/ft_lstlast.c.s
+srcs/libfts/ft_lstdelone.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstdelone.c.s
+.PHONY : srcs/libfts/ft_lstdelone.c.s
 
-srcs/ft_lstnew.o: srcs/ft_lstnew.c.o
-.PHONY : srcs/ft_lstnew.o
+srcs/libfts/ft_lstlast.o: srcs/libfts/ft_lstlast.c.o
+.PHONY : srcs/libfts/ft_lstlast.o
 
 # target to build an object file
-srcs/ft_lstnew.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstnew.c.o
-.PHONY : srcs/ft_lstnew.c.o
+srcs/libfts/ft_lstlast.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstlast.c.o
+.PHONY : srcs/libfts/ft_lstlast.c.o
 
-srcs/ft_lstnew.i: srcs/ft_lstnew.c.i
-.PHONY : srcs/ft_lstnew.i
+srcs/libfts/ft_lstlast.i: srcs/libfts/ft_lstlast.c.i
+.PHONY : srcs/libfts/ft_lstlast.i
 
 # target to preprocess a source file
-srcs/ft_lstnew.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstnew.c.i
-.PHONY : srcs/ft_lstnew.c.i
+srcs/libfts/ft_lstlast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstlast.c.i
+.PHONY : srcs/libfts/ft_lstlast.c.i
 
-srcs/ft_lstnew.s: srcs/ft_lstnew.c.s
-.PHONY : srcs/ft_lstnew.s
+srcs/libfts/ft_lstlast.s: srcs/libfts/ft_lstlast.c.s
+.PHONY : srcs/libfts/ft_lstlast.s
 
 # target to generate assembly for a file
-srcs/ft_lstnew.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstnew.c.s
-.PHONY : srcs/ft_lstnew.c.s
+srcs/libfts/ft_lstlast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstlast.c.s
+.PHONY : srcs/libfts/ft_lstlast.c.s
 
-srcs/ft_lstprelast.o: srcs/ft_lstprelast.c.o
-.PHONY : srcs/ft_lstprelast.o
+srcs/libfts/ft_lstnew.o: srcs/libfts/ft_lstnew.c.o
+.PHONY : srcs/libfts/ft_lstnew.o
 
 # target to build an object file
-srcs/ft_lstprelast.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.o
-.PHONY : srcs/ft_lstprelast.c.o
+srcs/libfts/ft_lstnew.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstnew.c.o
+.PHONY : srcs/libfts/ft_lstnew.c.o
 
-srcs/ft_lstprelast.i: srcs/ft_lstprelast.c.i
-.PHONY : srcs/ft_lstprelast.i
+srcs/libfts/ft_lstnew.i: srcs/libfts/ft_lstnew.c.i
+.PHONY : srcs/libfts/ft_lstnew.i
 
 # target to preprocess a source file
-srcs/ft_lstprelast.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.i
-.PHONY : srcs/ft_lstprelast.c.i
+srcs/libfts/ft_lstnew.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstnew.c.i
+.PHONY : srcs/libfts/ft_lstnew.c.i
 
-srcs/ft_lstprelast.s: srcs/ft_lstprelast.c.s
-.PHONY : srcs/ft_lstprelast.s
+srcs/libfts/ft_lstnew.s: srcs/libfts/ft_lstnew.c.s
+.PHONY : srcs/libfts/ft_lstnew.s
 
 # target to generate assembly for a file
-srcs/ft_lstprelast.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstprelast.c.s
-.PHONY : srcs/ft_lstprelast.c.s
+srcs/libfts/ft_lstnew.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstnew.c.s
+.PHONY : srcs/libfts/ft_lstnew.c.s
 
-srcs/ft_lstsize.o: srcs/ft_lstsize.c.o
-.PHONY : srcs/ft_lstsize.o
+srcs/libfts/ft_lstprelast.o: srcs/libfts/ft_lstprelast.c.o
+.PHONY : srcs/libfts/ft_lstprelast.o
 
 # target to build an object file
-srcs/ft_lstsize.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.o
-.PHONY : srcs/ft_lstsize.c.o
+srcs/libfts/ft_lstprelast.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstprelast.c.o
+.PHONY : srcs/libfts/ft_lstprelast.c.o
 
-srcs/ft_lstsize.i: srcs/ft_lstsize.c.i
-.PHONY : srcs/ft_lstsize.i
+srcs/libfts/ft_lstprelast.i: srcs/libfts/ft_lstprelast.c.i
+.PHONY : srcs/libfts/ft_lstprelast.i
 
 # target to preprocess a source file
-srcs/ft_lstsize.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.i
-.PHONY : srcs/ft_lstsize.c.i
+srcs/libfts/ft_lstprelast.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstprelast.c.i
+.PHONY : srcs/libfts/ft_lstprelast.c.i
 
-srcs/ft_lstsize.s: srcs/ft_lstsize.c.s
-.PHONY : srcs/ft_lstsize.s
+srcs/libfts/ft_lstprelast.s: srcs/libfts/ft_lstprelast.c.s
+.PHONY : srcs/libfts/ft_lstprelast.s
 
 # target to generate assembly for a file
-srcs/ft_lstsize.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/ft_lstsize.c.s
-.PHONY : srcs/ft_lstsize.c.s
+srcs/libfts/ft_lstprelast.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstprelast.c.s
+.PHONY : srcs/libfts/ft_lstprelast.c.s
 
-srcs/gt_find_start.o: srcs/gt_find_start.c.o
-.PHONY : srcs/gt_find_start.o
+srcs/libfts/ft_lstsize.o: srcs/libfts/ft_lstsize.c.o
+.PHONY : srcs/libfts/ft_lstsize.o
 
 # target to build an object file
-srcs/gt_find_start.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/gt_find_start.c.o
-.PHONY : srcs/gt_find_start.c.o
+srcs/libfts/ft_lstsize.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstsize.c.o
+.PHONY : srcs/libfts/ft_lstsize.c.o
 
-srcs/gt_find_start.i: srcs/gt_find_start.c.i
-.PHONY : srcs/gt_find_start.i
-
-# target to preprocess a source file
-srcs/gt_find_start.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/gt_find_start.c.i
-.PHONY : srcs/gt_find_start.c.i
-
-srcs/gt_find_start.s: srcs/gt_find_start.c.s
-.PHONY : srcs/gt_find_start.s
-
-# target to generate assembly for a file
-srcs/gt_find_start.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/gt_find_start.c.s
-.PHONY : srcs/gt_find_start.c.s
-
-srcs/merge_sort.o: srcs/merge_sort.c.o
-.PHONY : srcs/merge_sort.o
-
-# target to build an object file
-srcs/merge_sort.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/merge_sort.c.o
-.PHONY : srcs/merge_sort.c.o
-
-srcs/merge_sort.i: srcs/merge_sort.c.i
-.PHONY : srcs/merge_sort.i
+srcs/libfts/ft_lstsize.i: srcs/libfts/ft_lstsize.c.i
+.PHONY : srcs/libfts/ft_lstsize.i
 
 # target to preprocess a source file
-srcs/merge_sort.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/merge_sort.c.i
-.PHONY : srcs/merge_sort.c.i
+srcs/libfts/ft_lstsize.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstsize.c.i
+.PHONY : srcs/libfts/ft_lstsize.c.i
 
-srcs/merge_sort.s: srcs/merge_sort.c.s
-.PHONY : srcs/merge_sort.s
-
-# target to generate assembly for a file
-srcs/merge_sort.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/merge_sort.c.s
-.PHONY : srcs/merge_sort.c.s
-
-srcs/set_statuses.o: srcs/set_statuses.c.o
-.PHONY : srcs/set_statuses.o
-
-# target to build an object file
-srcs/set_statuses.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses.c.o
-.PHONY : srcs/set_statuses.c.o
-
-srcs/set_statuses.i: srcs/set_statuses.c.i
-.PHONY : srcs/set_statuses.i
-
-# target to preprocess a source file
-srcs/set_statuses.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses.c.i
-.PHONY : srcs/set_statuses.c.i
-
-srcs/set_statuses.s: srcs/set_statuses.c.s
-.PHONY : srcs/set_statuses.s
+srcs/libfts/ft_lstsize.s: srcs/libfts/ft_lstsize.c.s
+.PHONY : srcs/libfts/ft_lstsize.s
 
 # target to generate assembly for a file
-srcs/set_statuses.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses.c.s
-.PHONY : srcs/set_statuses.c.s
-
-srcs/set_statuses_1.o: srcs/set_statuses_1.c.o
-.PHONY : srcs/set_statuses_1.o
-
-# target to build an object file
-srcs/set_statuses_1.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_1.c.o
-.PHONY : srcs/set_statuses_1.c.o
-
-srcs/set_statuses_1.i: srcs/set_statuses_1.c.i
-.PHONY : srcs/set_statuses_1.i
-
-# target to preprocess a source file
-srcs/set_statuses_1.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_1.c.i
-.PHONY : srcs/set_statuses_1.c.i
-
-srcs/set_statuses_1.s: srcs/set_statuses_1.c.s
-.PHONY : srcs/set_statuses_1.s
-
-# target to generate assembly for a file
-srcs/set_statuses_1.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/set_statuses_1.c.s
-.PHONY : srcs/set_statuses_1.c.s
+srcs/libfts/ft_lstsize.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/push_swap.dir/build.make CMakeFiles/push_swap.dir/srcs/libfts/ft_lstsize.c.s
+.PHONY : srcs/libfts/ft_lstsize.c.s
 
 srcs/test1.o: srcs/test1.c.o
 .PHONY : srcs/test1.o
@@ -618,15 +570,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... push_swap"
-	@echo "... srcs/actions_1.o"
-	@echo "... srcs/actions_1.i"
-	@echo "... srcs/actions_1.s"
-	@echo "... srcs/actions_2.o"
-	@echo "... srcs/actions_2.i"
-	@echo "... srcs/actions_2.s"
-	@echo "... srcs/actions_3.o"
-	@echo "... srcs/actions_3.i"
-	@echo "... srcs/actions_3.s"
+	@echo "... srcs/0.merge_sort.o"
+	@echo "... srcs/0.merge_sort.i"
+	@echo "... srcs/0.merge_sort.s"
+	@echo "... srcs/1.actions.o"
+	@echo "... srcs/1.actions.i"
+	@echo "... srcs/1.actions.s"
+	@echo "... srcs/2.actions.o"
+	@echo "... srcs/2.actions.i"
+	@echo "... srcs/2.actions.s"
+	@echo "... srcs/3.actions.o"
+	@echo "... srcs/3.actions.i"
+	@echo "... srcs/3.actions.s"
 	@echo "... srcs/check_args.o"
 	@echo "... srcs/check_args.i"
 	@echo "... srcs/check_args.s"
@@ -636,45 +591,36 @@ help:
 	@echo "... srcs/do_stuff.o"
 	@echo "... srcs/do_stuff.i"
 	@echo "... srcs/do_stuff.s"
-	@echo "... srcs/ft_atoi.o"
-	@echo "... srcs/ft_atoi.i"
-	@echo "... srcs/ft_atoi.s"
-	@echo "... srcs/ft_lstadd_back.o"
-	@echo "... srcs/ft_lstadd_back.i"
-	@echo "... srcs/ft_lstadd_back.s"
-	@echo "... srcs/ft_lstadd_front.o"
-	@echo "... srcs/ft_lstadd_front.i"
-	@echo "... srcs/ft_lstadd_front.s"
-	@echo "... srcs/ft_lstclear.o"
-	@echo "... srcs/ft_lstclear.i"
-	@echo "... srcs/ft_lstclear.s"
-	@echo "... srcs/ft_lstdelone.o"
-	@echo "... srcs/ft_lstdelone.i"
-	@echo "... srcs/ft_lstdelone.s"
-	@echo "... srcs/ft_lstlast.o"
-	@echo "... srcs/ft_lstlast.i"
-	@echo "... srcs/ft_lstlast.s"
-	@echo "... srcs/ft_lstnew.o"
-	@echo "... srcs/ft_lstnew.i"
-	@echo "... srcs/ft_lstnew.s"
-	@echo "... srcs/ft_lstprelast.o"
-	@echo "... srcs/ft_lstprelast.i"
-	@echo "... srcs/ft_lstprelast.s"
-	@echo "... srcs/ft_lstsize.o"
-	@echo "... srcs/ft_lstsize.i"
-	@echo "... srcs/ft_lstsize.s"
-	@echo "... srcs/gt_find_start.o"
-	@echo "... srcs/gt_find_start.i"
-	@echo "... srcs/gt_find_start.s"
-	@echo "... srcs/merge_sort.o"
-	@echo "... srcs/merge_sort.i"
-	@echo "... srcs/merge_sort.s"
-	@echo "... srcs/set_statuses.o"
-	@echo "... srcs/set_statuses.i"
-	@echo "... srcs/set_statuses.s"
-	@echo "... srcs/set_statuses_1.o"
-	@echo "... srcs/set_statuses_1.i"
-	@echo "... srcs/set_statuses_1.s"
+	@echo "... srcs/fill_stacks.o"
+	@echo "... srcs/fill_stacks.i"
+	@echo "... srcs/fill_stacks.s"
+	@echo "... srcs/libfts/ft_atoi.o"
+	@echo "... srcs/libfts/ft_atoi.i"
+	@echo "... srcs/libfts/ft_atoi.s"
+	@echo "... srcs/libfts/ft_lstadd_back.o"
+	@echo "... srcs/libfts/ft_lstadd_back.i"
+	@echo "... srcs/libfts/ft_lstadd_back.s"
+	@echo "... srcs/libfts/ft_lstadd_front.o"
+	@echo "... srcs/libfts/ft_lstadd_front.i"
+	@echo "... srcs/libfts/ft_lstadd_front.s"
+	@echo "... srcs/libfts/ft_lstclear.o"
+	@echo "... srcs/libfts/ft_lstclear.i"
+	@echo "... srcs/libfts/ft_lstclear.s"
+	@echo "... srcs/libfts/ft_lstdelone.o"
+	@echo "... srcs/libfts/ft_lstdelone.i"
+	@echo "... srcs/libfts/ft_lstdelone.s"
+	@echo "... srcs/libfts/ft_lstlast.o"
+	@echo "... srcs/libfts/ft_lstlast.i"
+	@echo "... srcs/libfts/ft_lstlast.s"
+	@echo "... srcs/libfts/ft_lstnew.o"
+	@echo "... srcs/libfts/ft_lstnew.i"
+	@echo "... srcs/libfts/ft_lstnew.s"
+	@echo "... srcs/libfts/ft_lstprelast.o"
+	@echo "... srcs/libfts/ft_lstprelast.i"
+	@echo "... srcs/libfts/ft_lstprelast.s"
+	@echo "... srcs/libfts/ft_lstsize.o"
+	@echo "... srcs/libfts/ft_lstsize.i"
+	@echo "... srcs/libfts/ft_lstsize.s"
 	@echo "... srcs/test1.o"
 	@echo "... srcs/test1.i"
 	@echo "... srcs/test1.s"

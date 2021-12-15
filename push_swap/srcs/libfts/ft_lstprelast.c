@@ -1,4 +1,4 @@
-#include "../hdrs/push_swap.h"
+#include "../../hdrs/push_swap.h"
 
 t_list	*ft_lstprelast(t_list *lst)
 {

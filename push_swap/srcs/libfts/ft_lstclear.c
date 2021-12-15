@@ -1,24 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 13:24:02 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/10 19:43:06 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/11 14:11:55 by gernesto          #+#    #+#             */
+/*   Updated: 2021/12/10 19:50:30 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../hdrs/push_swap.h"
+#include "../../hdrs/push_swap.h"
 
-void	ft_lstdelone(t_list *lst)
+void	ft_lstclear(t_list **lst)
 {
-	if (lst)
+	t_list	*tmp;
+	t_list	*prev_ptr;
+
+	if (!lst)
+		return ;
+	tmp = *lst;
+	while (tmp != NULL)
 	{
-//		del(lst->list_position);
-//		del(lst->num);
-//		del(lst->i);
-		free(lst);
+		prev_ptr = tmp->next;
+//		del(tmp->list_position);
+//		del(tmp->x);
+//		del(tmp->y);
+		free(tmp);
+		tmp = prev_ptr;
 	}
+	*lst = NULL;
 }

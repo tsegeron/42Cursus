@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize.c                                       :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 22:30:26 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/11 16:36:47 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/11 09:11:15 by gernesto          #+#    #+#             */
+/*   Updated: 2021/12/10 10:50:47 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../hdrs/push_swap.h"
+#include "../../hdrs/push_swap.h"
 
-int	ft_lstsize(t_list *lst)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	if (lst == NULL)
-		return (0);
-	if ((lst->next) == NULL)
-		return (1);
-	else
-		return (ft_lstsize(lst->next) + 1);
+	t_list	*tmp;
+
+	if (!new)
+		return ;
+	if (!*lst)
+	{
+		*lst = new;
+		return ;
+	}
+	tmp = ft_lstlast(*lst);
+	tmp->next = new;
+//	tmp->prev = ;
 }

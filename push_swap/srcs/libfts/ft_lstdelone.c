@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 22:13:22 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/10 10:50:47 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/11 13:24:02 by gernesto          #+#    #+#             */
+/*   Updated: 2021/12/10 19:43:06 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../hdrs/push_swap.h"
+#include "../../hdrs/push_swap.h"
 
-t_list	*ft_lstnew(int num, int i)
+void	ft_lstdelone(t_list *lst)
 {
-	t_list	*list;
-
-	list = (t_list *) malloc(sizeof(t_list));
-	if (list)
+	if (lst)
 	{
-		list->num = num;
-		list->i = i;
-//		list->prev = NULL;
-		list->next = NULL;
+//		del(lst->list_position);
+//		del(lst->num);
+//		del(lst->i);
+		free(lst);
 	}
-	return (list);
 }

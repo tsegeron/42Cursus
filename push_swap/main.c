@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../hdrs/push_swap.h"
+#include "hdrs/push_swap.h"
 
 static int	display_error(void)
 {

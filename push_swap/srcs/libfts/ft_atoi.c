@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../hdrs/push_swap.h"
+#include "../../hdrs/push_swap.h"
 
 static int	ft_isspace(char c, int *m)
 {
