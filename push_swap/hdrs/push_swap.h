@@ -28,6 +28,7 @@ typedef struct s_list
 	int				gt_status;
 	int				actions_num_a;
 	int				actions_num_b;
+	int				actions_to_pa;
 	int				ip_status;
 	int				status1;
 	int				count2;
