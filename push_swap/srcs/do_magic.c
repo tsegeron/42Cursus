@@ -3,67 +3,36 @@
 void	do_magic(sts *s)
 {
 	int size_a;
-	t_list *tmp1;
+//	t_list *tmp1;
 
 	size_a = ft_lstsize(s->a);
-	tmp1 = s->a;
+//	tmp1 = s->a;
 
+// algorithm to move from A to B
 	while (size_a)
 	{
-		if (s->a->gt_status)
+		if (s->a->next && s->a->i > s->a->next->i)
+		{
+			sa(s, 0);
+			gt_set_statuses(s, gt_find_start(s));
+		}
+		else if (s->a->gt_status)
 			pb(s, 0);
 		else
 			ra(s, 0);
 		size_a--;
 	}
+
+// algorithm to move from A to B
+	while (s->b)
+	{
+
+	}
+
+
+
 }
 
-
-
-
-
-
-
-//	if (s->a->i > s->a->next->i)
-//		sa(s, 1);
-//	sb(s, 1);
-//	pa(s, 1);
-
-//	ra(s, 1);
-//	pb(s, 1);
-//	ra(s, 1);
-//	ra(s, 1);
-//	pb(s, 1);
-//	pb(s, 1);
-//	ra(s, 1);
-//	pa(s, 1);
-//	ra(s, 1);
-//	rb(s, 1);
-//	pa(s, 1);
-//	ra(s, 1);
-//	ra(s, 1);
-//	pa(s, 1);
-//	rra(s, 1);
-
-//	ra(s, 1);
-//	pb(s, 1);
-//	pb(s, 1);
-//	pa(s, 1);
-//	ra(s, 1);
-
-//	rra(s, 1);
-//	rra(s, 1);
-//	pa(s, 1);
-
-
-//	ra(s, 1);
-//	ra(s, 1);
-//	ra(s, 1);
-//	pb(s, 1);
-//	rra(s, 1);
-//	rb(s, 1);
-//	rra(s, 1);
-//	rrb(s, 1);
 
 //}
 /*

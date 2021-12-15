@@ -26,8 +26,7 @@ add_executable(push_swap
         srcs/merge_sort.c
         srcs/test1.c
         srcs/set_statuses.c
-        srcs/set_statuses_2.c
         srcs/set_statuses_1.c
         srcs/gt_find_start.c
-        srcs/rename_me.c
+        srcs/do_stuff.c
         )

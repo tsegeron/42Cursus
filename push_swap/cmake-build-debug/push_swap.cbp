@@ -8,140 +8,137 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug"/>
+				<Option working_dir="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug"/>
+				<Option working_dir="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug"/>
+				<Option working_dir="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="push_swap">
-				<Option output="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug"/>
+				<Option output="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="push_swap/fast">
-				<Option output="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/tsegeron/Coding/42/push_swap/cmake-build-debug"/>
+				<Option output="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/push_swap" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add directory="/usr/local/include"/>
-					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
 					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
 					<Add directory="/System/Library/Frameworks"/>
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/tsegeron/Coding/42/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 push_swap/fast"/>
+					<CompileFile command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j6 -f &quot;/Users/gernesto/Desktop/MyGit/push_swap/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/actions_1.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions_1.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/actions_2.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions_2.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/actions_3.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/actions_3.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/check_args.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/check_args.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/do_magic.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/do_magic.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_atoi.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/do_stuff.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstadd_back.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_atoi.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstadd_front.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstadd_back.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstclear.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstadd_front.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstdelone.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstclear.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstlast.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstdelone.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstnew.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstlast.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstprelast.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstnew.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/ft_lstsize.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstprelast.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/gt_find_start.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/ft_lstsize.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/merge_sort.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/gt_find_start.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/rename_me.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/merge_sort.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/set_statuses.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/set_statuses.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/set_statuses_1.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/set_statuses_1.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/set_statuses_2.c">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/srcs/test1.c">
 			<Option target="push_swap"/>
 		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/srcs/test1.c">
-			<Option target="push_swap"/>
-		</Unit>
-		<Unit filename="/Users/tsegeron/Coding/42/push_swap/CMakeLists.txt">
+		<Unit filename="/Users/gernesto/Desktop/MyGit/push_swap/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

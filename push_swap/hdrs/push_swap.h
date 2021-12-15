@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/14 19:07:11 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/15 10:51:15 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,7 @@ typedef struct s_list
 	int				i;
 	int				stay_a;
 	int				gt_status;
+	int				ip_status;
 	int				status1;
 	int				count2;
 	int				status2;
@@ -81,6 +82,7 @@ void	do_magic(sts *s);
 //void	set_statuses_plus_one_index_order(sts *s);
 t_list *gt_find_start(sts *s);
 void	do_stuff(sts *s);
+void	gt_set_statuses(sts *s, t_list *start);
 
 
 
