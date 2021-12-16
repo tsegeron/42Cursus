@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/15 17:39:15 by gernesto         ###   ########.fr       */
+/*   Updated: 2021/12/16 13:07:27 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,6 @@ typedef struct stucks
 	int		count_true1;
 	int		count_true2;
 	int		count_actions;
-//	int
-
 }	sts;
 
 
@@ -71,7 +69,6 @@ void	fill_stack_a(sts *s, char *av[]);
 void	fill_stack_sorted(sts *s, int ac);
 void	put_indexes(sts *s);
 
-
 void	sa(sts *s, int q);
 void	sb(sts *s, int q);
 void	ss(sts *s, int q);
@@ -85,14 +82,12 @@ void	rrb(sts *s, int q);
 void	rrr(sts *s, int q);
 
 void	do_magic(sts *s);
-t_list *gt_find_start(sts *s);
+t_list	*gt_find_start(sts *s);
 void	do_stuff(sts *s);
 void	gt_set_statuses(sts *s);
 
 void	count_needed_actions_for_a(sts *s);
 void	count_needed_actions_for_b(sts *s);
-
-
-
+void	count_actions_to_pa(sts *s);
 
 #endif //PUSH_SWAP_H

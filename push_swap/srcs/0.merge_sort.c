@@ -17,8 +17,8 @@ void	merge(int a[], int start, int mid, int end)
 	int	i;
 	int	j;
 	int	k;
-	int left[mid - start + 1];
-	int right[end - mid];
+	int	left[mid - start + 1];
+	int	right[end - mid];
 
 	i = -1;
 	j = -1;

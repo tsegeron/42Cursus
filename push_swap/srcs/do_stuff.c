@@ -66,7 +66,6 @@ t_list	*gt_find_start(sts *s)
 	return (ptr_max);
 }
 
-
 /* Method #1
  * расставляет статусы для переноса в стек В
  * в порядке возрастания индекса на 1
@@ -79,7 +78,6 @@ void	ip_set_statuses(sts *s)
 	t_list	*tmp1;
 
 	find_index_0(s, &tmp, &tmp1); // находит элемент с 0 индексом
-
 	while (s->a->i != 0)
 	{
 		if (s->a->i == tmp + 1)
@@ -95,6 +93,7 @@ void	ip_set_statuses(sts *s)
 	}
 	s->a = tmp1;
 }
+
 /* Method #2
  * расставляет статусы для переноса в стек В
  * в порядке возрастания индекса в принципе

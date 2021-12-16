@@ -39,53 +39,7 @@ static int	num_of_elements_to_be_moved(sts *s)
 	return (count);
 }
 
-/*
- * в стеке А нужно искать элемент с минимально
- * бóльший индексом, чем у того, что в стаке В
- */
-static int	match_found(sts *s, int a, int b)
-{
-	t_list	*ptr_a;
-	int		minmax;
 
-	ptr_a = s->a;
-	minmax = ptr_a->i;
-	while (ptr_a)
-	{
-		if (ptr_a->i > b)
-		ptr_a = ptr_a->next;
-	}
-	return (0);
-}
-
-int		find_matching_index_elem(sts *s)
-{
-	t_list	*ptr_a;
-	t_list	*ptr_b;
-
-	ptr_b = s->b;
-	while (ptr_b)
-	{
-		ptr_a = s->a;
-		while (ptr_a)
-		{
-			if (match_found(s, ptr_a->i, ptr_b->i))
-				break ;
-			ptr_a = ptr_a->next;
-//			if (!ptr_a)
-//				ptr_a = s->a;
-		}
-		ptr_b->actions_to_pa = ptr_a->actions_num_a
-				+ ptr_b->actions_num_b;
-		ptr_b = ptr_b->next;
-	}
-	return (1);
-}
-
-void	count_actions_to_pa(sts *s)
-{
-
-}
 
 void	do_magic(sts *s)
 {
@@ -108,7 +62,8 @@ void	do_magic(sts *s)
 	}
 	count_needed_actions_for_a(s);
 	count_needed_actions_for_b(s);
-
+	count_actions_to_pa(s);
+	find_best_elem_to_pa(s);
 // algorithm to move from A to B
 //	while (s->b)
 //	{
