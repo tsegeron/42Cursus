@@ -1,26 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   align_stack_a.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/08 21:55:18 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/11 17:40:38 by gernesto         ###   ########.fr       */
+/*   Created: 2021/12/16 18:22:25 by gernesto          #+#    #+#             */
+/*   Updated: 2021/12/16 18:22:25 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PUSH_SWAP_H
-# define PUSH_SWAP_H
+#include "../hdrs/push_swap.h"
 
-# define ERROR "Error!\n"
+void	align_stack_a(t_s *s, int num)
+{
+	t_list	*ptr_a;
 
-# include <stdlib.h>	/* malloc, free, exit	*/
-# include <unistd.h>	/* write, read			*/
-
-# include <stdio.h>		/* test					*/
-
-int	check_args(int **a,int **b, int ac, char *av[]);
-int	ft_atoi(const char *str, int *check_zero);
-
-#endif //PUSH_SWAP_H
+	count_needed_actions_for_a(s);
+	ptr_a = s->a;
+	while (ptr_a->i != 0)
+		ptr_a = ptr_a->next;
+	while (s->a->i != 0)
+	{
+		if (ptr_a->actions_num_a < 0)
+			rra(s, num);
+		else
+			ra(s, num);
+	}
+}
