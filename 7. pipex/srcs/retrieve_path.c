@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 08:10:34 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/28 10:32:07 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/06 23:03:16 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,26 +17,37 @@ void	free_path(void)
 	int	i;
 
 	i = 0;
-	while (s.path[i])
+	while (g_s.path[i])
 		i++;
 	while (i--)
-		free(s.path[i]);
-	free(s.path);
-	s.path = NULL;
+		free(g_s.path[i]);
+	free(g_s.path);
+	g_s.path = NULL;
+	exit(2);
 }
 
-void	retrieve_path(char ***av, char ***envp)
+int	find_path_index(char ***envp)
 {
 	int	i;
 
-	s.path = ft_split((*envp)[0] + 5, ':');
-	if (!s.path)
-		return (perror("Error"));
 	i = -1;
-	while (s.path[++i])
+	while (ft_strncmp((*envp)[++i], "PATH", 4))
+		;
+	return (i);
+}
+
+void	retrieve_path(char ***envp)
+{
+	int	i;
+
+	g_s.path = ft_split((*envp)[find_path_index(envp)] + 5, ':');
+	if (!g_s.path)
+		exit (2);
+	i = -1;
+	while (g_s.path[++i])
 	{
-		s.path[i] = ft_strjoin(s.path[i], "/");
-		if (!s.path[i])
+		g_s.path[i] = ft_strjoin(g_s.path[i], "/");
+		if (!g_s.path[i])
 			return (free_path());
 	}
 }

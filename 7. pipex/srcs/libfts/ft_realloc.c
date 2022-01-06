@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_realloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 11:10:20 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/06 22:58:06 by gernesto         ###   ########.fr       */
+/*   Created: 2021/12/01 18:46:11 by gernesto          #+#    #+#             */
+/*   Updated: 2021/12/01 18:51:09 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../hdrs/pipex.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_realloc(void **src, size_t size)
 {
-	size_t	i;
+	void	*dst;
 
-	i = 0;
-	if (n == 0)
-		return (0);
-	while (i != n - 1 && s1[i] == s2[i]
-		&& s1[i] != '\0')
-		i++;
-	return (s1[i] - s2[i]);
+	if (!(*src))
+		return (NULL);
+	dst = malloc(size);
+	if (!dst)
+	{
+		free (*src);
+		return (NULL);
+	}
+	dst = ft_memmove(dst, *src, size);
+	free (*src);
+	*src = NULL;
+	return (dst);
 }

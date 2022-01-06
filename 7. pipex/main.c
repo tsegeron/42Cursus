@@ -1,65 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/01/06 22:07:29 by gernesto          #+#    #+#             */
+/*   Updated: 2022/01/06 22:38:38 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "hdrs/pipex.h"
 
-void	free_cmd(char ***cmd)
+void	free_stuff(void)
 {
 	int	i;
 
-	i = 0;
-	while ((*cmd)[i])
-		i++;
-	while (i--)
-		free((*cmd)[i]);
-	free(*cmd);
-	*cmd = NULL;
-}
-
-void	free_everything(void)
-{
-	int i;
-
-	free_path();
 	i = -1;
-	if (s.cmds)
+	while (++i < g_s.count_cmds)
 	{
-		while (++i < s.count_cmds)
-		{
-			if (s.cmds[i].cmd)
-				free_cmd(&s.cmds[i].cmd);
-			if (s.cmds[i].in != 0 && s.cmds[i].in != 1)
-				close(s.cmds[i].in);
-			if (s.cmds[i].out != 0 && s.cmds[i].out != 1)
-				close(s.cmds[i].out);
-		}
-		free(s.cmds);
-		s.cmds = NULL;
+		free(g_s.cmds[i].cmd[0]);
+		free(g_s.cmds[i].cmd[1]);
+		free(g_s.cmds[i].cmd[2]);
+		free(g_s.cmds[i].cmd);
 	}
-	if (s.family)
-	{
-		free(s.family);
-		s.family = NULL;
-	}
+	free_path();
 }
 
-int main(int ac, char *av[], char *envp[])
+int	main(int ac, char *av[], char *envp[])
 {
+	size_t	i;
+
+	g_s.ac = ac;
 	if (ac < 5)
-		return ((int )write(2, "Usage: ./pipex infile \"cmd1\" \"cmd2\" ... \"cmdn\" outfile\n", 55));
-
-	s.count_cmds = ac - 3;
-	if (!ft_strncmp(av[1], "here_doc", ft_strlen("here_doc")))
-	{
-		if (ac < 6)
-			return ((int )write(2, "Usage: ./pipex here_doc LIMITER \"cmd1\" \"cmd2\" ... \"cmdn\" outfile\n", 65));
-
-		s.count_cmds--;
-	}
-	retrieve_path(&av, &envp);
-	parse_commands(ac, &av);
-//	printf("%s",s.cmds[1].cmd[0]);
-	printf("%d ",s.cmds[3].in);
-	printf("%d ",s.cmds[3].out);
-//	fork_and_exec(envp);
-//	wait_and_close();
-	free_everything();
+		return ((int )write(2, "Usage: ./pipex infile"
+				"\"cmd1\" \"cmd2\" ... \"cmdn\" outfile\n", 55));
+	open_stuff(&ac, &av);
+	retrieve_path(&envp);
+	if (!ft_strcmp(av[1], "here_doc"))
+		read_input(av[2]);
+	parse_commands(&av);
+	i = -1;
+	while (++i < g_s.count_cmds)
+		do_pipex_stuff(i, envp);
+	if (g_s.open_status == 1)
+		unlink("here_doc");
+	else if (g_s.open_status == 2)
+		unlink("her_doc");
+	free_stuff();
 	return (0);
 }

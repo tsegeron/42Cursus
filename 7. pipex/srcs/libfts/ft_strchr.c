@@ -1,26 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 11:10:20 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/06 22:58:06 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 11:02:34 by gernesto          #+#    #+#             */
+/*   Updated: 2021/10/11 10:19:16 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../hdrs/pipex.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strchr(char *s, char c)
 {
-	size_t	i;
+	int		i;
 
+	if (!s)
+		return (NULL);
+	if (c == '\0')
+		return (&s[ft_strlen(s)]);
 	i = 0;
-	if (n == 0)
-		return (0);
-	while (i != n - 1 && s1[i] == s2[i]
-		&& s1[i] != '\0')
+	while (s[i])
+	{
+		if (s[i] == c)
+			return (&s[i]);
 		i++;
-	return (s1[i] - s2[i]);
+	}
+	return (NULL);
 }

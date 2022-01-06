@@ -47,8 +47,8 @@ static char	**ft_get_array(char const *str, char c, int count)
 {
 	char	**array;
 	size_t	lenstr;
-	size_t		i;
-	size_t		a;
+	size_t	i;
+	size_t	a;
 
 	i = 0;
 	a = 0;
