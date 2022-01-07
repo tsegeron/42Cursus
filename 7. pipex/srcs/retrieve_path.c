@@ -48,6 +48,6 @@ void	retrieve_path(char ***envp)
 	{
 		g_s.path[i] = ft_strjoin(g_s.path[i], "/");
 		if (!g_s.path[i])
-			return (free_path());
+			free_path();
 	}
 }

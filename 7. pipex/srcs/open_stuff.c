@@ -32,6 +32,8 @@ void	open_stuff(int *ac, char ***av)
 	if (!g_s.open_status)
 	{
 		g_s.cmds[0].in = open((*av)[1], O_RDONLY);
+		if (g_s.cmds[0].in < 0)
+			exit(1);
 		g_s.cmds[g_s.count_cmds - 1].out = open((*av)[g_s.ac - 1],
 				O_CREAT | O_RDWR | O_TRUNC, 0644);
 	}
@@ -44,9 +46,11 @@ void	open_stuff(int *ac, char ***av)
 			g_s.cmds[0].in = open("her_doc", O_CREAT | O_RDWR | O_TRUNC, 0644);
 			g_s.open_status++;
 		}
+		if (g_s.cmds[0].in < 0)
+			exit(1);
 		g_s.cmds[g_s.count_cmds - 1].out = open((*av)[g_s.ac - 1],
 				O_CREAT | O_RDWR | O_APPEND, 0644);
 	}
-	if (g_s.cmds[g_s.count_cmds - 1].out < 0 || g_s.cmds[0].in < 0)
+	if (g_s.cmds[g_s.count_cmds - 1].out < 0)
 		exit(1);
 }
