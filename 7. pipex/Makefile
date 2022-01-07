@@ -58,9 +58,9 @@ _END	=	\e[0m
 			@${CC} ${FLAGS} ${OPTFLAGS} -c -o $@ $<
 
 
-${NAME}: 	${OBJS}
+${NAME}: 	${OBJS} ${MAIN}
 			@${AR} ${LIB} $?
-			@${MAKE} clean
+#			@${MAKE} clean
 			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} -o ${NAME}
 			@printf "${_GREEN}${READY}${_END}\n"
 

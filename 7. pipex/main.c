@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/06 22:07:29 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/07 19:28:09 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/07 20:17:24 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	error_exit(char *msg)
 		write(2, msg, ft_strlen(msg));
 	else
 		perror("Error");
-	exit(-1);
+	exit(EXIT_FAILURE);
 }
 
 int	main(int ac, char **av, char **envp)
