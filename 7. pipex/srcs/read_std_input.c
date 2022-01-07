@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   read_input.c                                       :+:      :+:    :+:   */
+/*   read_std_input.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/06 22:11:50 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/06 22:11:50 by gernesto         ###   ########.fr       */
+/*   Created: 2022/01/07 19:28:41 by gernesto          #+#    #+#             */
+/*   Updated: 2022/01/07 19:28:41 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdrs/pipex.h"
 
-void	read_input(char *limiter)
+void	read_std_input(char *limiter)
 {
 	char	*line;
 	char	*lim;
 
 	lim = malloc(sizeof(char) * (ft_strlen(limiter) + 2));
 	if (!lim)
-		exit(3);
+		error_exit(NULL);
 	ft_memmove(lim, limiter, ft_strlen(limiter));
 	lim[ft_strlen(limiter)] = '\n';
 	lim[ft_strlen(limiter) + 1] = '\0';

@@ -1,6 +1,6 @@
 CC			=	gcc
 #-Wall -Wextra -Werror
-FLAGS		=
+FLAGS		=	-Wall -Wextra -Werror
 #FLAGS_MLX	=	-framework OpenGL -framework AppKit
 OPTFLAGS	=	-O2
 #BON_FLG0	=	-D BONUS=0
@@ -29,8 +29,8 @@ SRCS	=	libfts/ft_calloc.c			libfts/ft_split.c			libfts/ft_strjoin.c		\
 			libfts/ft_strlen.c			libfts/ft_substr.c			libfts/ft_strcmp.c		\
 			libfts/ft_strchr.c			libfts/ft_memmove.c			libfts/get_next_line.c	\
 			libfts/ft_strncmp.c																\
-			do_pipex_stuff.c			execute_cmd.c				open_stuff.c			\
-			parse_commands.c			read_input.c				retrieve_path.c			\
+			fork_and_exec.c				open_files.c				parse_commands.c		\
+			read_std_input.c			retrieve_path.c										\
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})
@@ -60,7 +60,7 @@ _END	=	\e[0m
 
 ${NAME}: 	${OBJS}
 			@${AR} ${LIB} $?
-#			@${MAKE} clean
+			@${MAKE} clean
 			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} -o ${NAME}
 			@printf "${_GREEN}${READY}${_END}\n"
 

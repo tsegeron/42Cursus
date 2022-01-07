@@ -6,48 +6,37 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/28 08:10:34 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/06 23:03:16 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/07 16:05:32 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdrs/pipex.h"
 
-void	free_path(void)
+static void	find_path_index(int *j, char ***envp)
 {
-	int	i;
-
-	i = 0;
-	while (g_s.path[i])
-		i++;
-	while (i--)
-		free(g_s.path[i]);
-	free(g_s.path);
-	g_s.path = NULL;
-	exit(2);
-}
-
-int	find_path_index(char ***envp)
-{
-	int	i;
-
-	i = -1;
-	while (ft_strncmp((*envp)[++i], "PATH", 4))
+	if (!(*envp))
+		error_exit("Error: env not found\n");
+	*j = -1;
+	while ((*envp)[++(*j)] && ft_strncmp((*envp)[*j], "PATH", 4))
 		;
-	return (i);
+	if (!(*envp)[*j])
+		error_exit("Error: PATH not found\n");
 }
 
 void	retrieve_path(char ***envp)
 {
 	int	i;
+	int	j;
 
-	g_s.path = ft_split((*envp)[find_path_index(envp)] + 5, ':');
+	find_path_index(&j, envp);
+	g_s.path = ft_split((*envp)[j] + 5, ':');
 	if (!g_s.path)
-		exit (2);
+		error_exit("Error: malloc\n");
 	i = -1;
 	while (g_s.path[++i])
 	{
 		g_s.path[i] = ft_strjoin(g_s.path[i], "/");
 		if (!g_s.path[i])
-			free_path();
+			error_exit("Error: malloc\n");
 	}
 }

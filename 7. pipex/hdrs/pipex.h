@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 04:19:43 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/06 22:54:18 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/07 19:20:38 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ typedef struct s
 	t_cmds	*cmds;
 	int		open_status;
 	int		count_cmds;
+	int		count_status;
 	int		i;
 	int		ac;
 	int		end[2];
@@ -52,13 +53,11 @@ char	**ft_split(char const *s, char c);
 char	*ft_strchr(char *s, char c);
 char	*get_next_line(int fd, int buf_size);
 
-void	free_stuff(void);
-void	free_path(void);
-void	open_stuff(int *ac, char ***av);
 void	retrieve_path(char ***envp);
-void	read_input(char *limiter);
+void	open_files(int *ac, char ***av);
+void	read_std_input(char *limiter);
 void	parse_commands(char ***av);
-void	do_pipex_stuff(size_t i, char **envp);
-void	execute_cmd(char **cmd, char **envp);
+void	fork_and_exec(size_t i, char **envp);
+void	error_exit(char *msg);
 
 #endif //PIPEX_H
