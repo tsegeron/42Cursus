@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/08 11:41:13 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/08 20:16:11 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/08 10:26:24 by gernesto          #+#    #+#             */
+/*   Updated: 2022/01/08 20:12:36 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../hdrs/pipex.h"
 
-void	*ft_calloc(size_t count, size_t size)
+void	ft_bzero(void *s, size_t n)
 {
-	void	*ptr;
-
-	ptr = malloc(count * size);
-	if (ptr)
-		ft_bzero(ptr, count * size);
-	return (ptr);
+	while (n != 0)
+		((char *)s)[--n] = '\0';
 }

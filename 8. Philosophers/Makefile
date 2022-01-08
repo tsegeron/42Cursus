@@ -26,7 +26,8 @@ FLDR_H	=	hdrs/
 MAIN	=	main.c
 #MAIN_B	=	checker.c
 
-SRCS	=
+SRCS	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c	\
+			input_parsing.c
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})

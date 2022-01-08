@@ -28,7 +28,7 @@ MAIN_B	=	checker.c
 SRCS	=	libfts/ft_calloc.c			libfts/ft_split.c			libfts/ft_strjoin.c		\
 			libfts/ft_strlen.c			libfts/ft_substr.c			libfts/ft_strcmp.c		\
 			libfts/ft_strchr.c			libfts/ft_memmove.c			libfts/get_next_line.c	\
-			libfts/ft_strncmp.c																\
+			libfts/ft_strncmp.c			libfts/ft_bzero.c									\
 			fork_and_exec.c				open_files.c				parse_commands.c		\
 			read_std_input.c			retrieve_path.c										\
 

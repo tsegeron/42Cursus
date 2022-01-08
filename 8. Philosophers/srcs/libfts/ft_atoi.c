@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:17:04 by gernesto          #+#    #+#             */
-/*   Updated: 2021/12/19 23:53:30 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/08 20:59:50 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,29 +25,28 @@ static int	ft_isspace(char c, int *m)
 	return (0);
 }
 
-int	ft_atoi(const char *str, int *check_zero)
+long long	ft_atoi(const char *str, int *check_zero)
 {
-	unsigned long long	res;
-	int					m;
-	int					i;
+	long long	res;
+	int			m;
+	int			i;
 
 	res = 0;
 	m = 1;
 	i = 0;
+	*check_zero = 0;
 	while (ft_isspace(str[i], &m))
 		i++;
-	if ((str[i] < '0') || (str[i] > '9'))
-		return (0);
 	while ((str[i] > 47) && (str[i] < 58))
 	{
 		res = res * 10 + str[i++] - 48;
 		*check_zero = 1;
 	}
-	if ((res > 2147483647 && m > 0) || (res > 2147483648 && m < 0) \
-	|| (((str[i] < '0') || (str[i] > '9')) && str[i] != ' ' && str[i]))
+	if ((res > UINT32_MAX || m < 0) \
+	|| ((str[i] < '0' || str[i] > '9') && str[i]))
 	{
 		*check_zero = 0;
 		return (0);
 	}
-	return ((int)res * m);
+	return (res);
 }

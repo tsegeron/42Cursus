@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/26 04:19:43 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/07 19:20:38 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/08 20:16:11 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ t_s	g_s;
 size_t	ft_strlen(const char *str);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+void    ft_bzero(void *s, size_t n);
 void	*ft_calloc(size_t count, size_t size);
 void	*ft_realloc(void **src, size_t size);
 void	*ft_memmove(void *dst, const void *src, size_t len);

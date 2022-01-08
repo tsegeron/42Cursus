@@ -6,11 +6,11 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/08 11:41:13 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/08 20:16:11 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/08 20:12:55 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/pipex.h"
+#include "../../hdrs/philo.h"
 
 void	*ft_calloc(size_t count, size_t size)
 {
