@@ -68,7 +68,7 @@ ${NAME}: 	${OBJS} ${MAIN}
 all:		${NAME}
 
 clean:
-			@${RM} ${OBJS}
+			@${RM} ${OBJS} ${LIB}
 			@printf "${_YELLOW}${SWEPT}${_END}\n"
 
 fclean:		clean

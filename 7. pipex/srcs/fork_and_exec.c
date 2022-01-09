@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/07 19:26:59 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/07 19:26:59 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/09 14:24:42 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,8 @@ static void	find_path(char *act_cmd, char **cmd)
 	i = -1;
 	while (g_s.path[++i])
 	{
+		if (!act_cmd)
+			break ;
 		*cmd = ft_strjoin(g_s.path[i], act_cmd);
 		if (!*cmd)
 			exit((int )write(2, "Malloc error\n", 13));
@@ -44,7 +46,7 @@ static void	find_path(char *act_cmd, char **cmd)
 		free (*cmd);
 	}
 	*cmd = NULL;
-	if (!g_s.path[i])
+	if (!g_s.path[i] || !act_cmd)
 		exit((int )write(2, "No such cmd\n", 12));
 }
 
