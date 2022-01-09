@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:10:08 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/08 21:35:35 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/09 12:16:59 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ typedef struct s2
 	unsigned long	philo_num;
 	unsigned long	eat_num;
 //	int				fork_status;
+	struct timeval	philo_timer;
 	pthread_mutex_t	fork;
 }	t_philo;
 
@@ -44,7 +45,7 @@ typedef struct s
 	int				i;
 	struct timeval	time;
 	long			ms;
-//	pthread_mutex_t	*fork;
+	pthread_mutex_t	death_stat;
 }	t_s;
 
 void		ft_putchar_fd(char c, int fd);

@@ -27,6 +27,8 @@ static int	init_philos(t_s *s)
 		if (pthread_mutex_init(&s->philo[i].fork, NULL))
 			return (printf("Error: mutex: init\n"));
 	}
+	if (pthread_mutex_init(&s->death_stat, NULL))
+		return (printf("Error: mutex: init\n"));
 	return (0);
 }
 
@@ -51,9 +53,6 @@ int	parse_input(int ac, char ***av, t_s *s)
 	if (!status[0] || !status[1] || !status[2] || !status[3] || !status[4] || \
 	s->t2die > MAX || s->t2eat > MAX || s->t2sleep > MAX)
 		return (printf("Error: invalid arguments\n"));
-//	s->fork = ft_calloc(s->philos_count, sizeof(pthread_mutex_t));
-//	if (!s->fork)
-//		return (printf("Error: malloc\n"));
 	if (init_philos(s))
 		return (1);
 	return (0);

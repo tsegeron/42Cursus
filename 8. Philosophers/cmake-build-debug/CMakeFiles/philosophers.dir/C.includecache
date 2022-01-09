@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/gernesto/Desktop/philosophers/hdrs/philo.h
+unistd.h
+-
+string.h
+-
+stdio.h
+-
+stdint.h
+-
+stdlib.h
+-
+sys/time.h
+-
+pthread.h
+-
+
+/Users/gernesto/Desktop/philosophers/main.c
+hdrs/philo.h
+/Users/gernesto/Desktop/philosophers/hdrs/philo.h
+
+/Users/gernesto/Desktop/philosophers/srcs/libfts/ft_atoi.c
+../../hdrs/philo.h
+/Users/gernesto/Desktop/philosophers/hdrs/philo.h
+
