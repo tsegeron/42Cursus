@@ -1,5 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/philosophers.dir/main.c.o"
+  "CMakeFiles/philosophers.dir/philos_routine.c.o"
+  "CMakeFiles/philosophers.dir/srcs/initialization.c.o"
   "CMakeFiles/philosophers.dir/srcs/input_parsing.c.o"
   "CMakeFiles/philosophers.dir/srcs/libfts/ft_atoi.c.o"
   "CMakeFiles/philosophers.dir/test.c.o"

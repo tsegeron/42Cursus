@@ -9,6 +9,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/gernesto/Desktop/philosophers/main.c" "/Users/gernesto/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/main.c.o"
+  "/Users/gernesto/Desktop/philosophers/philos_routine.c" "/Users/gernesto/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/philos_routine.c.o"
+  "/Users/gernesto/Desktop/philosophers/srcs/initialization.c" "/Users/gernesto/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/srcs/initialization.c.o"
   "/Users/gernesto/Desktop/philosophers/srcs/input_parsing.c" "/Users/gernesto/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/srcs/input_parsing.c.o"
   "/Users/gernesto/Desktop/philosophers/srcs/libfts/ft_atoi.c" "/Users/gernesto/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/srcs/libfts/ft_atoi.c.o"
   "/Users/gernesto/Desktop/philosophers/test.c" "/Users/gernesto/Desktop/philosophers/cmake-build-debug/CMakeFiles/philosophers.dir/test.c.o"

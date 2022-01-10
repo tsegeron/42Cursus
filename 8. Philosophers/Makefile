@@ -26,8 +26,10 @@ FLDR_H	=	hdrs/
 MAIN	=	main.c
 #MAIN_B	=	checker.c
 
-SRCS	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c	\
-			input_parsing.c
+SRCS	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c		\
+			libfts/ft_strjoin.c		libfts/ft_strlen.c								\
+			initialization.c		input_parsing.c			philos_routine.c		\
+			time_stuff.c			write_actions.c									\
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})
@@ -55,7 +57,7 @@ _END	=	\e[0m
 			@${CC} ${FLAGS} ${OPTFLAGS} -c -o $@ $<
 
 
-${NAME}: 	${OBJS}
+${NAME}: 	${OBJS} ${MAIN}
 			@${AR} ${LIB} $?
 			@${MAKE} clean
 			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} -o ${NAME}

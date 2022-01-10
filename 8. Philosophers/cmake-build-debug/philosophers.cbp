@@ -81,6 +81,12 @@
 		<Unit filename="/Users/gernesto/Desktop/philosophers/main.c">
 			<Option target="philosophers"/>
 		</Unit>
+		<Unit filename="/Users/gernesto/Desktop/philosophers/philos_routine.c">
+			<Option target="philosophers"/>
+		</Unit>
+		<Unit filename="/Users/gernesto/Desktop/philosophers/srcs/initialization.c">
+			<Option target="philosophers"/>
+		</Unit>
 		<Unit filename="/Users/gernesto/Desktop/philosophers/srcs/input_parsing.c">
 			<Option target="philosophers"/>
 		</Unit>

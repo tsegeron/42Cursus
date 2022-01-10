@@ -153,6 +153,54 @@ main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/main.c.s
 .PHONY : main.c.s
 
+philos_routine.o: philos_routine.c.o
+.PHONY : philos_routine.o
+
+# target to build an object file
+philos_routine.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philos_routine.c.o
+.PHONY : philos_routine.c.o
+
+philos_routine.i: philos_routine.c.i
+.PHONY : philos_routine.i
+
+# target to preprocess a source file
+philos_routine.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philos_routine.c.i
+.PHONY : philos_routine.c.i
+
+philos_routine.s: philos_routine.c.s
+.PHONY : philos_routine.s
+
+# target to generate assembly for a file
+philos_routine.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/philos_routine.c.s
+.PHONY : philos_routine.c.s
+
+srcs/initialization.o: srcs/initialization.c.o
+.PHONY : srcs/initialization.o
+
+# target to build an object file
+srcs/initialization.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/srcs/initialization.c.o
+.PHONY : srcs/initialization.c.o
+
+srcs/initialization.i: srcs/initialization.c.i
+.PHONY : srcs/initialization.i
+
+# target to preprocess a source file
+srcs/initialization.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/srcs/initialization.c.i
+.PHONY : srcs/initialization.c.i
+
+srcs/initialization.s: srcs/initialization.c.s
+.PHONY : srcs/initialization.s
+
+# target to generate assembly for a file
+srcs/initialization.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/philosophers.dir/build.make CMakeFiles/philosophers.dir/srcs/initialization.c.s
+.PHONY : srcs/initialization.c.s
+
 srcs/input_parsing.o: srcs/input_parsing.c.o
 .PHONY : srcs/input_parsing.o
 
@@ -237,6 +285,12 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... philos_routine.o"
+	@echo "... philos_routine.i"
+	@echo "... philos_routine.s"
+	@echo "... srcs/initialization.o"
+	@echo "... srcs/initialization.i"
+	@echo "... srcs/initialization.s"
 	@echo "... srcs/input_parsing.o"
 	@echo "... srcs/input_parsing.i"
 	@echo "... srcs/input_parsing.s"

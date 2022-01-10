@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 14:10:08 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/09 12:16:59 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/10 20:37:19 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,17 @@
 # include <pthread.h>
 
 # define MAX 4294967
+# define MSG_FORK " has taken a fork\n"
+# define MSG_EAT " is eating\n"
+# define MSG_SLEEP " is sleeping\n"
+# define MSG_THINK " is thinking\n"
+# define MSG_DIE " died\n"
 
 typedef struct s2
 {
 	unsigned long	philo_num;
 	unsigned long	eat_num;
-//	int				fork_status;
-	struct timeval	philo_timer;
+	unsigned long	last_meal;
 	pthread_mutex_t	fork;
 }	t_philo;
 
@@ -43,18 +47,26 @@ typedef struct s
 	long long		num_eat;
 	int				die_status;
 	int				i;
-	struct timeval	time;
-	long			ms;
+	struct timeval	start_time;
 	pthread_mutex_t	death_stat;
+	pthread_mutex_t	stdout_stat;
 }	t_s;
 
+size_t		ft_strlen(const char *str);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 void		ft_bzero(void *s, size_t n);
 void		*ft_calloc(size_t count, size_t size);
+char		*ft_strjoin(char *s1, char *s2);
 long long	ft_atoi(const char *str, int *check_zero);
 
 int			parse_input(int ac, char ***av, t_s *s);
+int			init_philos_and_mutexes(t_s *s);
+int			init_threads(t_s *s);
+void		*philo_routine(void *s);
+int			get_time_passed(t_s *s);
+int			write_action(t_s *s, unsigned long philo, char c);
+void		smart_sleep(t_s *s, unsigned long t2do);
 
 #endif
