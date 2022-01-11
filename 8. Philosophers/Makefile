@@ -1,6 +1,6 @@
 CC			=	gcc
 #-Wall -Wextra -Werror
-FLAGS		=
+FLAGS		=	-Wall -Wextra -Werror
 #FLAGS_MLX	=	-framework OpenGL -framework AppKit
 OPTFLAGS	=	-O2
 #BON_FLG0	=	-D BONUS=0
@@ -12,41 +12,55 @@ AR			=	ar rcs
 # ------------------------------------------------------------------------------
 
 NAME 	=	philo
+NAME_B 	=	philo_bonus
 LIB		=	philo.a
-#LIB1	=	libft.a
-#LIB2	=	pipex.a
+LIB_B	=	philo_bonus.a
 
 HDRS	=	philo.h
-#HDRS_B	=	so_long_b.h
+#HDRS_B	=
 
 FLDR_S	=	srcs/
-#FLDR_B	=	srcs_b/
 FLDR_H	=	hdrs/
 
-MAIN	=	main.c
-#MAIN_B	=	checker.c
+FLDR_SB	=	srcs_b/
+FLDR_HB	=	hdrs_b/
 
-SRCS	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c		\
-			libfts/ft_strjoin.c		libfts/ft_strlen.c								\
-			initialization.c		input_parsing.c			philos_routine.c		\
-			time_stuff.c			write_actions.c									\
+MAIN_F	=	main.c
+MAIN_FB	=	main_b.c
+
+SRCS	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c			\
+			libfts/ft_strjoin.c		libfts/ft_strlen.c		libfts/ft_lstadd_back.c		\
+			libfts/ft_lstnew.c		libfts/ft_lstlast.c									\
+			init.c					parse_input.c			philos_routine.c			\
+			time_stuff.c			write_actions.c			at_exit.c					\
 
 
-SRC		=	$(addprefix ${FLDR_S},${SRCS})
-#SRCB	=	$(addprefix ${FLDR_B},${SRCS})
-HDR		=	$(addprefix ${FLDR_H},${HDRS})
-#HDR_B	=	$(addprefix ${FLDR_H},${HDRS_B})
+SRCS_B	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c			\
+			libfts/ft_strjoin.c		libfts/ft_strlen.c		libfts/ft_lstadd_back.c		\
+			libfts/ft_lstnew.c		libfts/ft_lstlast.c									\
+			init.c					parse_input.c			philos_routine.c			\
+			time_stuff.c			write_actions.c			at_exit.c					\
+
+
+SRC		=	$(addprefix mandatory/, $(addprefix ${FLDR_S},${SRCS}))
+HDR		=	$(addprefix mandatory/, $(addprefix ${FLDR_H},${HDRS}))
 OBJS	=	${SRC:%.c=%.o}
-#OBJS_B	=	${SRCB:%.c=%.o}
+MAIN	=	$(addprefix mandatory/, ${MAIN_F})
+
+SRC_B	=	$(addprefix bonus_/, $(addprefix ${FLDR_SB},${SRCS_B}))
+HDR_B	=	$(addprefix bonus_/, $(addprefix ${FLDR_HB},${HDRS}))
+OBJS_B	=	${SRC_B:%.c=%.o}
+MAIN_B	=	$(addprefix bonus_/, ${MAIN_FB})
 
 # ------------------------------------------------------------------------------
 
 READY	=	Philo is ready
-#READYB	=	Checker is ready
+READY_B	=	Philo_bonus is ready
 SWEPT	=	Directory was cleaned
 _GREEN	=	\e[32m
 _YELLOW	=	\e[33m
-_CYAN	=	\e[36m
+_CYAN	=	\e[0;36m
+_PURPLE	=	\e[0;35m
 _END	=	\e[0m
 
 # ------------------------------------------------------------------------------
@@ -59,44 +73,36 @@ _END	=	\e[0m
 
 ${NAME}: 	${OBJS} ${MAIN}
 			@${AR} ${LIB} $?
-			@${MAKE} clean
 			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} -o ${NAME}
-			@printf "${_GREEN}${READY}${_END}\n"
+#			@${MAKE} clean
+			@printf "${_CYAN}${READY}${_END}\n"
 
 
 all:		${NAME}
 
 clean:
-			@${RM} ${OBJS}
-			@printf "${_YELLOW}${SWEPT}${_END}\n"
+			@${RM} ${OBJS} ${OBJS_B} ${LIB} ${LIB_B}
+			@printf "${_PURPLE}${SWEPT}${_END}\n"
 
 fclean:		clean
-			@${RM} ${NAME} ${LIB}
+			@${RM} ${NAME} ${NAME_B}
 
 re:			fclean all
 
-bonus:		${OBJS}
-#			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN_B} ${LIB} -o ${NAME_B}
-			@printf "${_GREEN}${READYB}${_END}\n"
+bonus:		${OBJS_B} ${MAIN_B}
+			@${AR} ${LIB_B} $?
+			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN_B} ${LIB_B} -o ${NAME_B}
+#			@${MAKE} clean
+			@printf "${_CYAN}${READY_B}${_END}\n"
 
-
-#main:
-#			@${CC} ${FLAGS} ${OPTFLAGS} main.c ${LIB}
-
-#test:
-#			@${CC} ${FLAGS} ${OPTFLAGS} test.c ${LIB}
 
 norm:
-			@norminette ${MAIN} ${FLDR_H} ${FLDR_S}
+			@norminette ${MAIN} ${HDR} ${SRC} ${MAIN_B} ${HDR_B} ${SRC_B}
 
-
-#exec:		${SRCS}
-#			${CC} ${FLAGS} ${OPTFLAGS} ${SRCS} -o ${ENAME}
 
 
 # ------------------------------------------------------------------------------
 
-#check:		re
 
 
 # ------------------------------------------------------------------------------
