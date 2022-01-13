@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../hdrs/philo.h"
 
 void	ft_putnbr_fd(int n, int fd)
 {
@@ -23,7 +23,7 @@ void	ft_putnbr_fd(int n, int fd)
 		if (n < 0)
 		{
 			n = -n;
-			ft_putchar_fd('-', fd);
+			write(fd, "-", 1);
 		}
 		a = (n % 10 + '0');
 		n /= 10;

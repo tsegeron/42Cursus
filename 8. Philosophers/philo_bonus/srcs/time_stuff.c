@@ -31,6 +31,8 @@ void	smart_sleep(t_s *s, unsigned long t2do)
 {
 	unsigned long	end_time;
 
+	if (s->die_status)
+		return ;
 	end_time = get_time_passed(s) + t2do;
 	while ((unsigned long )get_time_passed(s) < end_time)
 		usleep(50);

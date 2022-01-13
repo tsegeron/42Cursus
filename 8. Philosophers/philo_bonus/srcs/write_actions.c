@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 16:18:18 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/12 17:51:05 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/14 01:15:03 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,9 +90,9 @@ int	write_action(t_s *s, unsigned long philo, char c)
 		free(str_to_print);
 		return (1);
 	}
-	pthread_mutex_lock(&s->stdout_stat);
+	sem_wait(s->sem_stdout);
 	write(STDOUT_FILENO, str_to_print, ft_strlen(str_to_print));
 	free(str_to_print);
-	pthread_mutex_unlock(&s->stdout_stat);
+	sem_post(s->sem_stdout);
 	return (0);
 }

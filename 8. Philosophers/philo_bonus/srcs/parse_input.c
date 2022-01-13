@@ -6,13 +6,33 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/08 13:49:57 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/10 20:45:20 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/13 18:48:31 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdrs/philo.h"
 
-int	parse_input(int ac, char ***av, t_s **s)
+static int	create_philos_list(t_s **s, t_list **philo)
+{
+	t_list			*lst_start;
+	t_list			*lst_last;
+	unsigned long	i;
+
+	(*s)->die_status = 0;
+	i = -1;
+	while (++i < (*s)->philos_count)
+		ft_lstadd_back(&(*philo), ft_lstnew(i + 1, (*s)));
+	if (ft_lstsize(*philo) != (*s)->philos_count)
+		return (error_write("Error: malloc\n"));
+	lst_start = (*philo);
+	lst_last = ft_lstlast((*philo));
+	lst_last->next = (*philo);
+	(*philo)->prev = lst_last;
+	(*philo) = lst_start;
+	return (0);
+}
+
+int	parse_input(int ac, char ***av, t_s **s, t_list **philo)
 {
 	int	i;
 	int	status[5];
@@ -34,5 +54,5 @@ int	parse_input(int ac, char ***av, t_s **s)
 	(*s)->t2die > MAX || (*s)->t2eat > MAX || (*s)->t2sleep > MAX || \
 	(*s)->philos_count < 1 || !(*s)->num_eat)
 		return (error_write("Error: invalid arguments\n"));
-	return (0);
+	return (create_philos_list(s, philo));
 }

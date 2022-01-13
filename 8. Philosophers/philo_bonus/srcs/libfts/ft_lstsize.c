@@ -1,34 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 22:12:44 by gernesto          #+#    #+#             */
-/*   Updated: 2021/10/11 10:19:16 by gernesto         ###   ########.fr       */
+/*   Created: 2021/10/10 22:30:26 by gernesto          #+#    #+#             */
+/*   Updated: 2022/01/13 18:39:41 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../../hdrs/philo.h"
 
-void	ft_putnbr_fd(int n, int fd)
+unsigned long	ft_lstsize(t_list *lst)
 {
-	char	a;
-
-	if (n == -2147483648)
-		write (fd, "-2147483648", 11);
+	if (lst == NULL)
+		return (0);
+	if ((lst->next) == NULL)
+		return (1);
 	else
-	{
-		if (n < 0)
-		{
-			n = -n;
-			ft_putchar_fd('-', fd);
-		}
-		a = (n % 10 + '0');
-		n /= 10;
-		if (n != 0)
-			ft_putnbr_fd(n, fd);
-		write(fd, &a, 1);
-	}
+		return (ft_lstsize(lst->next) + 1);
 }

@@ -6,54 +6,93 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 20:34:13 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/11 21:18:45 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/14 01:13:21 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../hdrs/philo.h"
 
-int	philos_and_mutexes_init(t_s **s, t_list **philo)
+static void	*end_check_loop(void *copy_s)
 {
-	t_list			*lst_start;
-	t_list			*lst_last;
-	unsigned long	i;
+	t_s	*s;
+	int	*ret;
+	int	child_stat;
+	int	i;
 
-	(*s)->die_status = 0;
+	s = (t_s *)copy_s;
+	ret = malloc(sizeof(int));
+	if (!ret)
+		return (NULL);
 	i = -1;
-	while (++i < (*s)->philos_count)
-		ft_lstadd_back(&(*philo), ft_lstnew(i + 1, (*s)));
-	lst_start = (*philo);
-	lst_last = ft_lstlast((*philo));
-	lst_last->next = (*philo);
-	(*philo)->prev = lst_last;
-	(*philo) = lst_start;
-	i = -1;
-	while (++i < (*s)->philos_count)
+	*ret = 0;
+	while (++i < s->philos_count)
 	{
-		if (pthread_mutex_init(&(*philo)->fork, NULL))
-			return (error_write("Error: mutex: init\n"));
-		(*philo) = (*philo)->next;
+		if (waitpid(-1, &child_stat, 0) < 0)
+		{
+			perror("Error >>");
+			error_write("Error: waitpid\n");
+			break ;
+		}
+		if (WSTOPSIG(child_stat) == 1)
+		{
+//			printf("THERE");
+			*ret += 1;
+			if (*ret == s->philos_count)
+				break ;
+		}
+		else if (WSTOPSIG(child_stat) == 2)
+		{
+//			printf("HERE");
+			*ret = 0;
+			break ;
+		}
 	}
-	(*philo) = lst_start;
-	if (pthread_mutex_init(&(*s)->stdout_stat, NULL))
-		return (error_write("Error: mutex: init\n"));
+	return ((void *)ret);
+}
+
+int	launch_thread_and_processes(t_s *s, t_list *philo)
+{
+	unsigned int	i;
+	int				*res;
+
+	if (pthread_create(&s->thread, NULL, &end_check_loop, s))
+		return (error_write("Error: thread: create\n"));
+	i = -1;
+	s->family = (pid_t *)ft_calloc(s->philos_count, sizeof(pid_t));
+	while (++i < s->philos_count)
+	{
+		s->family[i] = fork();
+		if (s->family[i] < 0)
+			exit(error_write("Error: fork\n"));
+		if (!s->family[i])
+		{
+			philo_routine(philo);
+			exit(5);
+		}
+		philo = philo->next;
+	}
+	philo = philo->next;
+	if (pthread_join(s->thread, (void **)&res))
+		return (error_write("Error: thread: join\n"));
+	printf(">>>>%d\n", *res);
+	if (!*res || *res == s->philos_count)
+	{
+		free(res);
+		exit(printf("Imitation finished\n"));
+	}
+	free(res);
 	return (0);
 }
 
-int	threads_init(t_s *s, t_list *philo)
+int	semaphores_init(t_s **s)
 {
-	unsigned int	i;
-
-	s->thread = ft_calloc(s->philos_count, sizeof(pthread_t));
-	i = 0;
-	while (i < s->philos_count)
-	{
-		if (pthread_create(&s->thread[i], NULL, &philo_routine, philo))
-			return (error_write("Error: thread: init\n"));
-		philo = philo->next;
-		if (pthread_detach(s->thread[i]))
-			return (error_write("Error: thread: init\n"));
-		i++;
-	}
+	sem_unlink(SEM_FORK); // Check?
+	sem_unlink(SEM_STDOUT); // Check?
+	(*s)->sem_fork = sem_open(SEM_FORK, O_CREAT, 0660, (*s)->philos_count);
+	if ((*s)->sem_fork == SEM_FAILED)
+		return (error_write("Error: semaphore: open\n"));
+	(*s)->sem_stdout = sem_open(SEM_STDOUT, O_CREAT, 0660, 1);
+	if ((*s)->sem_stdout == SEM_FAILED)
+		return (error_write("Error: semaphore: open\n"));
 	return (0);
 }
