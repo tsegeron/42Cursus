@@ -31,7 +31,7 @@ void	*philo_routine(void *philo)
 
 	tmp = (t_list *)philo;
 	if (!(tmp->philo_num % 2))
-		usleep(1000);
+		usleep(100);
 	while (!tmp->s->die_status)
 	{
 		philo_eats(tmp);

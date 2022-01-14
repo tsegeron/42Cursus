@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/12 16:50:16 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/14 00:17:46 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/14 17:35:45 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,15 +83,9 @@ int				error_write(char *msg);
 int				parse_input(int ac, char ***av, t_s **s, t_list **philo);
 int				semaphores_init(t_s **s);
 int				launch_thread_and_processes(t_s *s, t_list *philo);
-int				philo_routine(t_list *philo);
-
-
-int				philos_and_semaphores_init(t_s **s, t_list **philo);
 int				get_time_passed(t_s *s);
-int				processes_init(t_s *s, t_list *philo);
+int				philo_routine(t_list *philo);
 int				write_action(t_s *s, unsigned long philo, char c);
 void			smart_sleep(t_s *s, unsigned long t2do);
-void			loop_at_exit(t_s *s, t_list *philo);
-int				destroy_mutexes_at_exit(t_s **s, t_list **philo);
 
 #endif

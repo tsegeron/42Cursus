@@ -1,6 +1,6 @@
 CC			=	gcc
 #-Wall -Wextra -Werror
-#FLAGS		=	-Wall -Wextra -Werror
+FLAGS		=	-Wall -Wextra -Werror
 #FLAGS_MLX	=	-framework OpenGL -framework AppKit
 OPTFLAGS	=	-O2
 #BON_FLG0	=	-D BONUS=0
@@ -34,7 +34,7 @@ SRCS	=	libfts/ft_atoi.c		libfts/ft_calloc.c		libfts/ft_bzero.c			\
 			libfts/ft_lstsize.c															\
 			parse_input.c			init.c					write_actions.c				\
 			philos_routine.c		time_stuff.c										\
-#									at_exit.c					\
+
 
 #$(addprefix mand/, )
 SRC		=	$(addprefix ${FLDR_S},${SRCS})
@@ -69,8 +69,8 @@ _END	=	\e[0m
 
 ${NAME}: 	${OBJS} ${MAIN}
 			@${AR} ${LIB} $?
-			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} -o ${NAME}
-			@${MAKE} clean
+			@${CC} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} -o ${NAME_B}
+#			@${MAKE} clean
 			@printf "${_CYAN}${READY}${_END}\n"
 
 

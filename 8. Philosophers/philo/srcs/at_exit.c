@@ -41,7 +41,7 @@ void	loop_at_exit(t_s *s, t_list *philo)
 	while (philo)
 	{
 		cur_time = get_time_passed(philo->s);
-		if (cur_time > philo->last_meal + philo->s->t2die
+		if (cur_time >= philo->last_meal + philo->s->t2die
 			&& philo->eat_num < (unsigned long )s->num_eat)
 		{
 			philo->s->die_status = 1;

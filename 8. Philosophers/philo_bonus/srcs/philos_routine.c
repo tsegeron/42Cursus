@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 20:37:27 by gernesto          #+#    #+#             */
-/*   Updated: 2022/01/14 01:52:45 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/01/14 17:44:41 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	*check_for_death(void *tmp)
 	while (1)
 	{
 		cur_time = get_time_passed(philo->s);
-		if (cur_time > philo->last_meal + philo->s->t2die
+		if (cur_time >= philo->last_meal + philo->s->t2die
 			&& philo->eat_num < (unsigned long )philo->s->num_eat)
 		{
 			philo->s->die_status = 1;
@@ -34,8 +34,8 @@ static void	*check_for_death(void *tmp)
 
 int	philo_routine(t_list *philo)
 {
-	if (philo->philo_num % 2)
-		usleep(500);
+	if (philo->philo_num > philo->s->philos_count / 2)
+		usleep(100);
 	if (pthread_create(&philo->death_check, NULL, &check_for_death, philo))
 		exit(error_write("Error: thread: create\n"));
 	if (pthread_detach(philo->death_check))
